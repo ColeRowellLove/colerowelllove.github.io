@@ -39,3 +39,12 @@ There is no test suite. Verify changes by previewing the page at phone width (ab
 6. **Delete old branches.** Once a PR is merged, delete its branch on GitHub and locally (`git push origin --delete <branch>`, then `git branch -d <branch>`), and run `git fetch --prune`. If a branch is renamed, delete the old name as well. Before deleting a branch, confirm it is merged or duplicated elsewhere (`git branch -r --merged origin/main`).
 7. **Keep the docs in sync.** Every change must update `README.md` and `CLAUDE.md` if anything they describe has changed (structure, commands, features, workflow, conventions). If nothing needs updating, say so in the PR.
 8. **Commit messages** are short and imperative ("Add projects section"). Commits authored by Claude end with the `Co-Authored-By` trailer given in the environment.
+9. **PRs that change how the site looks include screenshots.** That means any change to `style.css`, page markup, or content shown on a page. Capture the changed page in dark and light at desktop width, plus one at phone width, after your final commit. Headless Chrome works without extra tooling (it can't go narrower than about 500px, so label that shot "phone layout"):
+
+   ```bash
+   chrome --headless=new --hide-scrollbars --virtual-time-budget=20000 --run-all-compositor-stages-before-draw \
+     --blink-settings=preferredColorScheme=0 --window-size=1280,2000 \
+     --screenshot=home-dark-desktop.png http://localhost:8000/index.html
+   ```
+
+   `preferredColorScheme=0` is dark and `1` is light. The virtual-time flags matter: without them the scroll-reveal cards are still invisible in the capture. Look at every image before using it. Upload them to the data-only `pr-screenshots` branch under `pr-<number>/` and embed them in the PR body by raw URL (`https://raw.githubusercontent.com/ColeRowellLove/colerowelllove.github.io/pr-screenshots/pr-<number>/<file>.png`). `pr-screenshots` is the one branch exempt from rules 3 and 6: it never merges into `main` and is never deleted.
