@@ -47,6 +47,10 @@ Workflow: branch off `main`, open a pull request, wait for CI to pass, then merg
 
 Hosted with GitHub Pages from the `main` branch. Pushing to `main` updates the live site.
 
+## Cache busting
+
+GitHub Pages lets browsers cache files for about 10 minutes, so a visitor can briefly see a new `index.html` with an old stylesheet. The `style.css` and `script.js` links in `index.html` carry a `?v=` number. Bump it whenever you change either file.
+
 ## Contact
 
 [colerowell11@gmail.com](mailto:colerowell11@gmail.com) · [LinkedIn](https://www.linkedin.com/in/colerowell) · [GitHub](https://github.com/ColeRowellLove)

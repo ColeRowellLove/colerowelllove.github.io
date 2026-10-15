@@ -50,6 +50,6 @@ jobs:
 
       - name: Local asset references resolve
         run: |
-          for f in $(grep -oE '(href|src)="[^"#:]+\.(css|js)"' index.html | sed -E 's/.*="([^"]+)"/\1/'); do
+          for f in $(grep -oE '(href|src)="[^"#:?]+\.(css|js)(\?[^"]*)?"' index.html | sed -E 's/.*="([^"?]+).*/\1/'); do
             test -f "$f" || { echo "index.html references missing file: $f"; exit 1; }
           done
