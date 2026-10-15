@@ -1,0 +1,25 @@
+{
+  "name": "colerowell11-github-io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal website of Cole Rowell-Love",
+  "type": "module",
+  "scripts": {
+    "serve": "python -m http.server 8000",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
+    "lint:html": "html-validate index.html",
+    "lint:css": "stylelint style.css",
+    "lint:js": "eslint script.js eslint.config.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0",
+    "html-validate": "^9.0.0",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard": "^36.0.0"
+  }
+}

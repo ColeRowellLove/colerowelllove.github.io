@@ -1,30 +1,28 @@
-# Cole Rowell: Personal Website
+# Cole Rowell-Love: Personal Website
 
-My personal portfolio site, live at **https://colerowell11.github.io**. It's built from my resume as a single-page static site with plain HTML, CSS, and JavaScript (no frameworks, no build step).
+My personal site, live at **https://colerowell11.github.io**. It's a single-page static site built with plain HTML, CSS, and JavaScript (no frameworks, no build step).
 
 ## Features
 
-- Hero section with an animated neural-network particle background and a typing effect
-- Resume content laid out as an experience timeline, a project card, a skills grid, and education
-- Animated stat counters and scroll-reveal animations
-- Cursor-following spotlight effect on cards
-- Dark and light themes (saved in `localStorage`)
-- Responsive layout with a mobile menu
-- Respects `prefers-reduced-motion`
+- Resume content presented as experience, projects, skills, and education
+- Clean typographic design, with automatic light and dark mode (follows system setting)
+- Responsive layout that works from phone to desktop, with a scrollable navigation bar on small screens
+- Accessible markup: skip link, keyboard focus styles, semantic headings, reduced-motion support
+- Print-friendly styles
 
 ## Project structure
 
 ```
 .
-├── index.html   # Page structure and content
-├── style.css    # Styling, themes, responsive layout
-├── script.js    # Theme toggle, animations, particle canvas
+├── index.html   # Page content and structure
+├── style.css    # Styling and responsive layout
+├── script.js    # Footer year and active-section nav highlight
 └── README.md
 ```
 
 ## Run locally
 
-No install needed. Open `index.html` in a browser, or serve the folder:
+Open `index.html` in a browser, or serve the folder:
 
 ```bash
 python -m http.server 8000
@@ -32,15 +30,22 @@ python -m http.server 8000
 
 Then visit http://localhost:8000.
 
+## Development
+
+Linting uses [Node.js](https://nodejs.org) 20 or newer:
+
+```bash
+npm install
+npm run lint
+```
+
+This runs `html-validate` on the HTML, `stylelint` on the CSS, and `eslint` on the JavaScript. The same checks run in GitHub Actions on every pull request and on pushes to `main` (see `.github/workflows/ci.yml`). Dependabot opens monthly update PRs for the dev dependencies and the workflow actions.
+
+Workflow: branch off `main`, open a pull request, wait for CI to pass, then merge.
+
 ## Deployment
 
-The site is hosted with GitHub Pages from the `main` branch. Pushing to `main` updates the live site.
-
-## Customizing
-
-- **Content:** edit the sections in `index.html`.
-- **Colors:** change the CSS variables at the top of `style.css` (`--accent`, `--accent-2`, `--grad`, ...).
-- **Typing phrases:** edit the `phrases` array in `script.js`.
+Hosted with GitHub Pages from the `main` branch. Pushing to `main` updates the live site.
 
 ## Contact
 

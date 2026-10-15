@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Lint HTML, CSS and JS
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Validate HTML
+        run: npm run lint:html
+
+      - name: Lint CSS
+        run: npm run lint:css
+
+      - name: Lint JavaScript
+        run: npm run lint:js
+
+  site-check:
+    name: Check site files
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Required files exist
+        run: |
+          for f in index.html style.css script.js README.md; do
+            test -f "$f" || { echo "Missing $f"; exit 1; }
+          done
+
+      - name: Local asset references resolve
+        run: |
+          for f in $(grep -oE '(href|src)="[^"#:]+\.(css|js)"' index.html | sed -E 's/.*="([^"]+)"/\1/'); do
+            test -f "$f" || { echo "index.html references missing file: $f"; exit 1; }
+          done
