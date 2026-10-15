@@ -1,13 +1,15 @@
 # Cole Rowell-Love: Personal Website
 
-My personal site, live at **https://colerowelllove.github.io**. It's a small multi-page static site built with plain HTML, CSS, and JavaScript (no frameworks, no build step).
+My personal site, live at **https://colerowelllove.github.io**. It's a small multi-page static site built with [Astro](https://astro.build) (static output, no client-side framework), with plain CSS and a little vanilla JavaScript.
 
 ## Features
 
-- Five pages: Home, Experience, Projects, About (skills and education), and Contact, plus a custom 404 page
+- Five pages: Home, Experience, Projects, About (skills, education, and interests), and Contact, plus a custom 404 page
+- One shared layout, with all content kept in a single data file (`src/data/site.js`)
 - Resume content only, with a projects page that notes which work is private
 - SEO basics: per-page titles and descriptions, Open Graph tags, canonical URLs, `robots.txt`, and `sitemap.xml`
-- Terminal-inspired design in JetBrains Mono: prompt-style headings, a blinking cursor, a rotating topic line, and scroll-reveal cards, dark by default with a light variant (follows system setting)
+- Terminal-inspired design in JetBrains Mono: prompt-style headings, a blinking cursor, a rotating topic line, and scroll-reveal cards
+- Dark and light mode: follows the OS by default, with a header toggle that remembers your choice
 - Responsive layout that works from phone to desktop, with a scrollable navigation bar on small screens
 - Accessible markup: skip link, keyboard focus styles, semantic headings, reduced-motion support (animations are off when the OS asks for less motion)
 - Print-friendly styles
@@ -16,41 +18,39 @@ My personal site, live at **https://colerowelllove.github.io**. It's a small mul
 
 ```
 .
-├── index.html       # Home
-├── experience.html  # Work history
-├── projects.html    # Selected projects
-├── about.html       # Skills, education, and interests
-├── contact.html     # Email and profile links
-├── 404.html         # Not-found page
-├── style.css        # Styling and responsive layout
-├── script.js        # Footer year, rotating topic word, scroll-reveal
-├── favicon.svg
-├── robots.txt
-├── sitemap.xml
+├── src/
+│   ├── pages/        # index, experience, projects, about, contact, 404 (.astro)
+│   ├── layouts/      # Layout.astro: head/meta, header/nav, footer
+│   ├── components/   # Entry.astro: the shared card
+│   ├── data/site.js  # All page content: experience, projects, skills, interests
+│   ├── styles/       # global.css
+│   └── scripts/      # site.js: footer year, rotating topic word, scroll-reveal
+├── public/           # favicon.svg, robots.txt, sitemap.xml (copied as-is)
+├── astro.config.mjs
+├── .github/workflows # ci.yml (lint and checks), deploy.yml (GitHub Pages)
 ├── README.md
-└── CLAUDE.md    # Contribution and workflow rules
+└── CLAUDE.md         # Contribution and workflow rules
 ```
 
 ## Run locally
 
-Open `index.html` in a browser, or serve the folder:
+Requires [Node.js](https://nodejs.org) 22.12 or newer.
 
 ```bash
-python -m http.server 8000
+npm install
+npm run dev
 ```
 
-Then visit http://localhost:8000.
+Then visit http://localhost:4321. `npm run build` writes the site to `dist/`, and `npm run preview` serves that build.
 
 ## Development
-
-Linting uses [Node.js](https://nodejs.org) 20 or newer:
 
 ```bash
 npm install
 npm run lint
 ```
 
-This runs `html-validate` on every page, `stylelint` on the CSS, and `eslint` on the JavaScript. The same checks run in GitHub Actions on every pull request and on pushes to `main` (see `.github/workflows/ci.yml`). Dependabot opens monthly update PRs for the dev dependencies and the workflow actions.
+`npm run lint` builds the site, then runs `html-validate` on the built pages, `stylelint` on the CSS, and `eslint` on the JavaScript. The same checks run in GitHub Actions on every pull request and on pushes to `main` (see `.github/workflows/ci.yml`). Dependabot opens monthly update PRs for the dev dependencies and the workflow actions.
 
 `npm install` also sets up a [husky](https://typicode.github.io/husky/) pre-commit hook (`.husky/pre-commit`) that runs `npm run lint` before every commit, so lint errors are caught locally. Don't bypass it with `--no-verify`.
 
@@ -58,11 +58,7 @@ Workflow: every change starts from an issue, gets its own typed branch off `main
 
 ## Deployment
 
-Hosted with GitHub Pages from the `main` branch. Pushing to `main` updates the live site.
-
-## Cache busting
-
-GitHub Pages lets browsers cache files for about 10 minutes, so a visitor can briefly see a new `index.html` with an old stylesheet. The `style.css` and `script.js` links in every HTML page carry a `?v=` number. Bump it whenever you change either file.
+A GitHub Actions workflow (`.github/workflows/deploy.yml`) builds the site and publishes `dist/` to GitHub Pages on every push to `main`. In the repository settings, Pages uses the "GitHub Actions" source. Astro content-hashes the CSS and JS filenames, so browsers never serve a stale stylesheet with a new page.
 
 ## Contact
 

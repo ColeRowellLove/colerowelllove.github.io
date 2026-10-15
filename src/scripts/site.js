@@ -27,3 +27,29 @@ if ('IntersectionObserver' in window && !reduceMotion) {
   }, { rootMargin: '0px 0px -8% 0px' });
   items.forEach((el) => observer.observe(el));
 }
+
+// Dark/light toggle. With no saved choice the site follows the OS setting.
+const themeToggle = document.querySelector('.theme-toggle');
+if (themeToggle) {
+  const root = document.documentElement;
+  const osLight = window.matchMedia('(prefers-color-scheme: light)');
+  const current = () => root.dataset.theme || (osLight.matches ? 'light' : 'dark');
+  const sync = () => {
+    const target = current() === 'dark' ? 'Light mode' : 'Dark mode';
+    themeToggle.textContent = target;
+    themeToggle.setAttribute('aria-label', `Switch to ${target.toLowerCase()}`);
+  };
+  sync();
+  themeToggle.hidden = false;
+  osLight.addEventListener('change', sync);
+  themeToggle.addEventListener('click', () => {
+    const next = current() === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem('theme', next);
+    } catch {
+      // Storage unavailable: the choice just won't be remembered.
+    }
+    sync();
+  });
+}
