@@ -152,7 +152,7 @@ h3, .entry-title { font-size: 1.05rem; font-weight: 700; line-height: 1.4; margi
 
 /* Scroll reveal (only active when script.js has run) */
 .js-reveal .entry, .js-reveal .stats li, .js-reveal .skills > div { opacity: 0; translate: 0 16px; transition: opacity 0.45s, translate 0.45s, border-color 0.2s; }
-.js-reveal .in { opacity: 1; translate: 0 0; }
+.js-reveal .in, .js-reveal .stats li.in, .js-reveal .skills > div.in { opacity: 1; translate: 0 0; }
 
 /* Tablet and phone */
 @media (max-width: 720px) {
