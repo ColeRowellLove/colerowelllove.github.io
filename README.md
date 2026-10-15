@@ -36,6 +36,7 @@ My personal site, live at **https://colerowelllove.github.io**. It's a small mul
 ├── LICENSE           # MIT license for the code
 ├── CONTRIBUTING.md   # How to report problems or contribute
 ├── CODE_OF_CONDUCT.md # Contributor Covenant 2.1
+├── .mailmap          # Maps old names/emails in history to one author
 ├── README.md
 └── CLAUDE.md         # Contribution and workflow rules
 ```
