@@ -8,7 +8,7 @@ Personal website of Cole Rowell-Love, served by GitHub Pages at https://colerowe
 
 ## Commands
 
-Node 22.12+ is required (Astro's minimum).
+Node 22.12+ is required (Astro's minimum); `.nvmrc` pins Node 22 (CI's `setup-node` also uses 22).
 
 ```bash
 npm install                      # install Astro and lint tooling
