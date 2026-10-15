@@ -26,6 +26,14 @@ export const highlights = [
 
 export const experience = [
   {
+    id: 'earthdynamicsai',
+    dates: 'May 2026 – Present',
+    place: 'Vancouver, BC',
+    title: 'Data Engineer',
+    org: 'EarthDynamicsAI',
+    bullets: [],
+  },
+  {
     id: 'ubc',
     dates: 'May – Aug 2025',
     place: 'Vancouver, BC',
