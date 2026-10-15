@@ -5,6 +5,7 @@ import portrait from '../assets/cole.jpg';
 import Entry from '../components/Entry.astro';
 import { site, skills, education, awards, interests } from '../data/site.js';
 ---
+
 <Layout
   title={`About | ${site.name}`}
   description="About Cole Rowell-Love: Engineering Physics graduate of the University of British Columbia, with skills in Python, C++, PyTorch, and machine learning tooling, plus scholarships and awards and interests in fitness, sports, music, and AI."
@@ -14,15 +15,33 @@ import { site, skills, education, awards, interests } from '../data/site.js';
     <div class="about-text">
       <p class="eyebrow">About</p>
       <h1>About me</h1>
-      <p class="summary">I'm an Engineering Physics graduate of the University of British Columbia in Vancouver. I've worked on deep learning for medical imaging, evaluation and fine-tuning of large language models, and production computer vision, along with the software around them.</p>
+      <p class="summary">
+        I'm an Engineering Physics graduate of the University of British Columbia in Vancouver. I've
+        worked on deep learning for medical imaging, evaluation and fine-tuning of large language
+        models, and production computer vision, along with the software around them.
+      </p>
     </div>
-    <Image class="portrait" src={portrait} width={480} height={480} widths={[240, 480]} sizes="240px" loading="eager" alt="Cole at graduation, smiling in a black gown and holding a UBC diploma folder" />
+    <Image
+      class="portrait"
+      src={portrait}
+      width={480}
+      height={480}
+      widths={[240, 480]}
+      sizes="240px"
+      loading="eager"
+      alt="Cole at graduation, smiling in a black gown and holding a UBC diploma folder"
+    />
   </section>
 
   <section class="wrap block" aria-labelledby="skills-h">
     <h2 id="skills-h">Skills</h2>
     <dl class="skills">
-      {skills.map((s) => <div><dt>{s.label}</dt><dd>{s.value}</dd></div>)}
+      {skills.map((s) => (
+        <div>
+          <dt>{s.label}</dt>
+          <dd>{s.value}</dd>
+        </div>
+      ))}
     </dl>
   </section>
 
@@ -36,7 +55,9 @@ import { site, skills, education, awards, interests } from '../data/site.js';
   <section class="wrap block" aria-labelledby="awards-h">
     <h2 id="awards-h">Awards</h2>
     <div class="entries">
-      {awards.map((a) => <Entry {...a} />)}
+      {awards.map((a) => (
+        <Entry {...a} />
+      ))}
     </div>
   </section>
 
@@ -47,7 +68,10 @@ import { site, skills, education, awards, interests } from '../data/site.js';
         <div>
           <dt>{s.label}</dt>
           <dd>
-            <p class="pick"><span class="pick-kind">{s.pick.kind}</span>{s.pick.text}</p>
+            <p class="pick">
+              <span class="pick-kind">{s.pick.kind}</span>
+              {s.pick.text}
+            </p>
             <p class="also">Also: {s.also}</p>
           </dd>
         </div>
@@ -57,6 +81,15 @@ import { site, skills, education, awards, interests } from '../data/site.js';
 
   <section class="wrap block" aria-labelledby="elsewhere-h">
     <h2 id="elsewhere-h">Elsewhere</h2>
-    <p class="more"><a href={site.linkedin} target="_blank" rel="noopener">LinkedIn</a> · <a href={site.github} target="_blank" rel="noopener">GitHub</a> · <a href="/contact">Contact</a></p>
+    <p class="more">
+      <a href={site.linkedin} target="_blank" rel="noopener">
+        LinkedIn
+      </a>{' '}
+      ·{' '}
+      <a href={site.github} target="_blank" rel="noopener">
+        GitHub
+      </a>{' '}
+      · <a href="/contact">Contact</a>
+    </p>
   </section>
 </Layout>

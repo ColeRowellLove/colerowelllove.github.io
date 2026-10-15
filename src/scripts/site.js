@@ -18,13 +18,16 @@ if (rotator && !reduceMotion) {
 if ('IntersectionObserver' in window && !reduceMotion) {
   const items = document.querySelectorAll('.entry, .stats li, .skills > div');
   document.documentElement.classList.add('js-reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('in');
-      observer.unobserve(entry.target);
-    });
-  }, { rootMargin: '0px 0px -8% 0px' });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      });
+    },
+    { rootMargin: '0px 0px -8% 0px' },
+  );
   items.forEach((el) => observer.observe(el));
 }
 
