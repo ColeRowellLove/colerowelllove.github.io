@@ -38,20 +38,36 @@ jobs:
   site-check:
     name: Check site files
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v7
 
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Build the site
+        run: npm run build
+
       - name: Required files exist
         run: |
-          for f in index.html experience.html projects.html about.html contact.html 404.html style.css script.js favicon.svg robots.txt sitemap.xml README.md; do
-            test -f "$f" || { echo "Missing $f"; exit 1; }
+          for f in index.html experience.html projects.html about.html contact.html 404.html favicon.svg robots.txt sitemap.xml; do
+            test -f "dist/$f" || { echo "Missing dist/$f"; exit 1; }
           done
+          test -f README.md || { echo "Missing README.md"; exit 1; }
 
-      - name: Local asset references resolve
+      - name: Internal links and assets resolve
         run: |
-          for page in *.html; do
-            for f in $(grep -oE '(href|src)="[^"#:?]+\.(css|js|svg|html)(\?[^"]*)?"' "$page" | sed -E 's/.*="([^"?]+).*/\1/; s#^/##'); do
-              test -f "$f" || { echo "$page references missing file: $f"; exit 1; }
+          for page in dist/*.html; do
+            for href in $(grep -oE '(href|src)="/[^"#?]*"' "$page" | sed -E 's/.*="([^"]*)"//'); do
+              case "$href" in
+                /) f=dist/index.html ;;
+                *.*) f="dist$href" ;;
+                *) f="dist$href.html" ;;
+              esac
+              test -f "$f" || { echo "$page links to a missing target: $href"; exit 1; }
             done
           done

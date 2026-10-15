@@ -6,21 +6,24 @@
   "type": "module",
   "scripts": {
     "prepare": "husky",
-    "serve": "python -m http.server 8000",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
     "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
-    "lint:html": "html-validate \"*.html\"",
-    "lint:css": "stylelint style.css",
-    "lint:js": "eslint script.js eslint.config.js"
+    "lint:html": "astro build && html-validate \"dist/**/*.html\"",
+    "lint:css": "stylelint \"src/**/*.css\"",
+    "lint:js": "eslint src/scripts astro.config.mjs eslint.config.js"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22.12"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "astro": "^7.3.8",
     "eslint": "^10.12.0",
     "globals": "^17.13.0",
-    "husky": "^9.1.7",
     "html-validate": "^11.16.2",
+    "husky": "^9.1.7",
     "stylelint": "^17.16.0",
     "stylelint-config-recommended": "^18.0.0"
   }
