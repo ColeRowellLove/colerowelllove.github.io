@@ -27,15 +27,17 @@ My personal site, live at **https://colerowelllove.github.io**. It's a small mul
 │   ├── styles/       # global.css
 │   └── scripts/      # site.js: footer year, rotating topic word, scroll-reveal
 ├── public/           # favicon.svg and PNG icons, robots.txt, sitemap.xml (copied as-is)
+├── .nvmrc            # Node version for local development
 ├── astro.config.mjs
 ├── .github/workflows # ci.yml (lint and checks), deploy.yml (GitHub Pages)
+├── LICENSE           # MIT license for the code
 ├── README.md
 └── CLAUDE.md         # Contribution and workflow rules
 ```
 
 ## Run locally
 
-Requires [Node.js](https://nodejs.org) 22.12 or newer.
+Requires [Node.js](https://nodejs.org) 22.12 or newer; `.nvmrc` pins Node 22, so `nvm use` (or `fnm use`) picks the right version.
 
 ```bash
 npm install
@@ -60,6 +62,10 @@ Workflow: every change starts from an issue, gets its own typed branch off `main
 ## Deployment
 
 A GitHub Actions workflow (`.github/workflows/deploy.yml`) builds the site and publishes `dist/` to GitHub Pages on every push to `main`. In the repository settings, Pages uses the "GitHub Actions" source. Astro content-hashes the CSS and JS filenames, so browsers never serve a stale stylesheet with a new page.
+
+## License
+
+The code is released under the [MIT License](LICENSE). The site's written content, photo, and resume information are not covered by that license: they are © Cole Rowell-Love, all rights reserved.
 
 ## Contact
 
