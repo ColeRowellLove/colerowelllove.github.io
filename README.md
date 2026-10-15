@@ -7,9 +7,9 @@ My personal site, live at **https://colerowelllove.github.io**. It's a small mul
 - Five pages: Home, Experience, Projects, About (skills and education), and Contact, plus a custom 404 page
 - Resume content only, with a projects page that notes which work is private
 - SEO basics: per-page titles and descriptions, Open Graph tags, canonical URLs, `robots.txt`, and `sitemap.xml`
-- Clean typographic design, with automatic light and dark mode (follows system setting)
+- Playful neo-brutalist design: bold colors, chunky cards, animated shapes, a rotating topic line, and scroll-reveal cards, with automatic light and dark mode (follows system setting)
 - Responsive layout that works from phone to desktop, with a scrollable navigation bar on small screens
-- Accessible markup: skip link, keyboard focus styles, semantic headings, reduced-motion support
+- Accessible markup: skip link, keyboard focus styles, semantic headings, reduced-motion support (animations are off when the OS asks for less motion)
 - Print-friendly styles
 
 ## Project structure
@@ -23,7 +23,7 @@ My personal site, live at **https://colerowelllove.github.io**. It's a small mul
 ├── contact.html     # Email and profile links
 ├── 404.html         # Not-found page
 ├── style.css        # Styling and responsive layout
-├── script.js        # Footer year
+├── script.js        # Footer year, rotating topic word, scroll-reveal
 ├── favicon.svg
 ├── robots.txt
 ├── sitemap.xml
@@ -62,7 +62,7 @@ Hosted with GitHub Pages from the `main` branch. Pushing to `main` updates the l
 
 ## Cache busting
 
-GitHub Pages lets browsers cache files for about 10 minutes, so a visitor can briefly see a new `index.html` with an old stylesheet. The `style.css` and `script.js` links in `index.html` carry a `?v=` number. Bump it whenever you change either file.
+GitHub Pages lets browsers cache files for about 10 minutes, so a visitor can briefly see a new `index.html` with an old stylesheet. The `style.css` and `script.js` links in every HTML page carry a `?v=` number. Bump it whenever you change either file.
 
 ## Contact
 
