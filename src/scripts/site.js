@@ -3,17 +3,6 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
 
-// Cycle the highlighted topic on the home page.
-const rotator = document.querySelector('[data-words]');
-if (rotator && !reduceMotion) {
-  const words = rotator.dataset.words.split('|');
-  let i = 0;
-  setInterval(() => {
-    i = (i + 1) % words.length;
-    rotator.textContent = words[i];
-  }, 2200);
-}
-
 // Fade cards in as they scroll into view. Content stays visible if this can't run.
 if ('IntersectionObserver' in window && !reduceMotion) {
   const items = document.querySelectorAll('.entry, .stats li, .skills > div');
