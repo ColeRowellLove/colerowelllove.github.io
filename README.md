@@ -29,6 +29,7 @@ My personal site, live at **https://colerowelllove.github.io**. It's a small mul
 ├── public/           # favicon.svg and PNG icons, robots.txt, sitemap.xml (copied as-is)
 ├── astro.config.mjs
 ├── .github/workflows # ci.yml (lint and checks), deploy.yml (GitHub Pages)
+├── LICENSE           # MIT license for the code
 ├── README.md
 └── CLAUDE.md         # Contribution and workflow rules
 ```
@@ -60,6 +61,10 @@ Workflow: every change starts from an issue, gets its own typed branch off `main
 ## Deployment
 
 A GitHub Actions workflow (`.github/workflows/deploy.yml`) builds the site and publishes `dist/` to GitHub Pages on every push to `main`. In the repository settings, Pages uses the "GitHub Actions" source. Astro content-hashes the CSS and JS filenames, so browsers never serve a stale stylesheet with a new page.
+
+## License
+
+The code is released under the [MIT License](LICENSE). The site's written content, photo, and resume information are not covered by that license: they are © Cole Rowell-Love, all rights reserved.
 
 ## Contact
 
