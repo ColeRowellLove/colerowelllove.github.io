@@ -16,7 +16,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "a11y": "npm run build && node scripts/a11y.mjs",
-    "lighthouse": "npm run build && npx --yes @lhci/cli@0.15.1 autorun"
+    "lighthouse": "npm run build && npx --yes @lhci/cli@0.15.1 autorun",
+    "og-image": "node scripts/og-image.mjs"
   },
   "engines": {
     "node": ">=22.12"

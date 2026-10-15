@@ -29,7 +29,7 @@ My personal site, live at **https://colerowelllove.github.io**. It's a small mul
 ├── public/           # favicon.svg and PNG icons, robots.txt, sitemap.xml (copied as-is)
 ├── .nvmrc            # Node version for local development
 ├── .prettierrc       # Prettier config (see also .prettierignore)
-├── scripts/          # a11y.mjs: axe-core accessibility check on the built site
+├── scripts/          # a11y.mjs (axe-core check), og-image.mjs/.html (social preview card)
 ├── .lighthouserc.json # Lighthouse CI budgets (performance, accessibility, best practices, SEO)
 ├── astro.config.mjs
 ├── .github/          # workflows (ci.yml, deploy.yml), issue templates, PR template
