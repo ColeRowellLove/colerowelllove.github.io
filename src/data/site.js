@@ -206,7 +206,8 @@ export const awards = [
 ];
 
 export const interests = [
-  { label: 'Staying active', value: 'Gym, cycling, hiking' },
-  { label: 'Music', value: 'EDM, rock, rap' },
-  { label: 'Reading and learning', value: 'Self-help books, AI' },
+  { label: 'Staying active', pick: { kind: 'Hike', text: 'Garibaldi Lake, BC' }, also: 'Gym, cycling' },
+  { label: 'Watching sports', pick: { kind: 'Team', text: 'Seattle Seahawks' }, also: 'NFL, fantasy football, UFC' },
+  { label: 'Music', pick: { kind: 'Artist', text: 'Elliott Smith' }, also: 'EDM, rock, rap' },
+  { label: 'Reading and learning', pick: { kind: 'Book', text: 'The Power of Now, by Eckhart Tolle' }, also: 'Self-help books, AI' },
 ];
