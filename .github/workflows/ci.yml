@@ -62,7 +62,7 @@ jobs:
       - name: Internal links and assets resolve
         run: |
           for page in dist/*.html; do
-            for href in $(grep -oE '(href|src)="/[^"#?]*"' "$page" | sed -E 's/.*="([^"]*)"//'); do
+            for href in $(grep -oE '(href|src)="/[^"#?]*"' "$page" | sed -E 's/.*="([^"]*)"/\1/'); do
               case "$href" in
                 /) f=dist/index.html ;;
                 *.*) f="dist$href" ;;
