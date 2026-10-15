@@ -8,7 +8,7 @@ My personal site, live at **https://colerowelllove.github.io**. It's a small mul
 - One shared layout, with all content kept in a single data file (`src/data/site.js`)
 - Resume content only, with a projects page that notes which work is private
 - SEO basics: per-page titles and descriptions, Open Graph tags, canonical URLs, `robots.txt`, and `sitemap.xml`
-- Terminal-inspired design in JetBrains Mono: prompt-style headings, a blinking cursor, a rotating topic line, and scroll-reveal cards
+- Terminal-inspired design in JetBrains Mono: prompt-style headings, a blinking cursor, and scroll-reveal cards
 - Dark and light mode: follows the OS by default, with a header toggle that remembers your choice
 - Responsive layout that works from phone to desktop, with a scrollable navigation bar on small screens
 - Accessible markup: skip link, keyboard focus styles, semantic headings, reduced-motion support (animations are off when the OS asks for less motion)
@@ -25,7 +25,7 @@ My personal site, live at **https://colerowelllove.github.io**. It's a small mul
 │   ├── assets/       # Images processed by Astro (the About-page photo)
 │   ├── data/site.js  # All page content: experience, projects, skills, interests
 │   ├── styles/       # global.css
-│   └── scripts/      # site.js: footer year, rotating topic word, scroll-reveal
+│   └── scripts/      # site.js: footer year, dark/light toggle, scroll-reveal
 ├── public/           # favicon.svg and PNG icons, robots.txt, sitemap.xml (copied as-is)
 ├── .nvmrc            # Node version for local development
 ├── .prettierrc       # Prettier config (see also .prettierignore)
