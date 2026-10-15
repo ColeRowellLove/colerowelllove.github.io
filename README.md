@@ -19,7 +19,7 @@ My personal site, live at **https://colerowelllove.github.io**. It's a small mul
 ├── index.html       # Home
 ├── experience.html  # Work history
 ├── projects.html    # Selected projects
-├── about.html       # Skills and education
+├── about.html       # Skills, education, and interests
 ├── contact.html     # Email and profile links
 ├── 404.html         # Not-found page
 ├── style.css        # Styling and responsive layout
