@@ -1,0 +1,24 @@
+name: Content correction
+description: A factual error or typo in the site's text
+labels: [documentation]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      placeholder: https://colerowelllove.github.io/experience
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: What the site says now
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What it should say, and how you know
+      description: A source helps, such as a link.
+    validations:
+      required: true
