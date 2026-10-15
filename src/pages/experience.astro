@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Entry from '../components/Entry.astro';
+import { site, experience } from '../data/site.js';
+---
+<Layout
+  title={`Experience | ${site.name}`}
+  description="Work experience of Cole Rowell-Love: machine learning research at UBC, ML engineering at Yakoa, software development at Sonic Incytes, and systems engineering at Kardium."
+  ogDescription="Machine learning research, ML engineering, and medical device software."
+>
+  <section class="wrap page-head">
+    <p class="eyebrow">Experience</p>
+    <h1>Where I've worked</h1>
+    <p class="summary">Research and co-op roles across medical imaging, applied machine learning, and medical device software.</p>
+  </section>
+
+  <section class="wrap block" aria-label="Work history">
+    <div class="entries">
+      {experience.map((job) => (
+        <Entry heading="h2" dates={job.dates} place={job.place} title={job.title} org={job.org} bullets={job.bullets} />
+      ))}
+    </div>
+    <p class="more"><a href="/projects">See projects</a> · <a href="/contact">Get in touch</a></p>
+  </section>
+</Layout>

@@ -4,7 +4,7 @@ import globals from 'globals';
 export default [
   js.configs.recommended,
   {
-    files: ['script.js'],
+    files: ['src/scripts/**/*.js'],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'script',
@@ -12,7 +12,7 @@ export default [
     },
   },
   {
-    files: ['eslint.config.js'],
+    files: ['eslint.config.js', 'astro.config.mjs'],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
