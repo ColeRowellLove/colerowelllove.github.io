@@ -5,6 +5,7 @@
   "description": "Personal website of Cole Rowell-Love",
   "type": "module",
   "scripts": {
+    "prepare": "husky",
     "serve": "python -m http.server 8000",
     "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
     "lint:html": "html-validate index.html",
@@ -18,6 +19,7 @@
     "@eslint/js": "^10.0.1",
     "eslint": "^10.12.0",
     "globals": "^17.13.0",
+    "husky": "^9.1.7",
     "html-validate": "^11.16.2",
     "stylelint": "^17.16.0",
     "stylelint-config-recommended": "^18.0.0"
