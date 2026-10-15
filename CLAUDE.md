@@ -1,58 +1,40 @@
 # CLAUDE.md
 
-Guidance for Claude (and any contributor) working in this repository.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project
 
-Personal website of Cole Rowell-Love, served by GitHub Pages at https://colerowelllove.github.io. It's a single-page static site: plain HTML, CSS, and JavaScript, no frameworks and no build step. Content comes from Cole's resume, so don't invent claims, metrics, or roles that the resume doesn't support.
-
-```
-index.html   page content and structure
-style.css    styling, light/dark theme, responsive layout
-script.js    footer year and active-section nav highlight
-README.md    project overview and developer docs
-CLAUDE.md    this file
-.github/     CI workflow, Dependabot, PR template
-```
+Personal website of Cole Rowell-Love, served by GitHub Pages at https://colerowelllove.github.io. It is a single-page static site in plain HTML, CSS, and JavaScript: no framework, no bundler, no build step. The content comes from Cole's resume, so don't invent claims, metrics, or roles the resume doesn't support. Use the name "Cole Rowell-Love" in titles, headings, metadata, and docs.
 
 ## Commands
 
+Node 20+ is needed only for linting; the site itself has no runtime dependencies.
+
 ```bash
-npm install        # install lint tooling (Node 20+)
-npm run lint       # html-validate + stylelint + eslint (what CI runs)
-npm run serve      # preview at http://localhost:8000
+npm install                      # install lint tooling
+npm run lint                     # html-validate + stylelint + eslint (exactly what CI runs)
+npm run lint:html                # one check at a time: lint:html, lint:css, lint:js
+npx stylelint style.css          # lint a single file
+npm run serve                    # preview at http://localhost:8000 (python http.server)
 ```
+
+There is no test suite. Verify changes by previewing the page at phone width (about 375px) and desktop width and checking for horizontal scrolling.
+
+## Architecture
+
+- **`index.html` is the single source of content.** Every section (`#experience`, `#projects`, `#skills`, `#education`, `#contact`) is a `<section class="wrap block">` with an `id`. `script.js` builds the nav highlight by reading the nav links' `href`s and observing the matching section ids, so renaming or removing a section id requires updating the nav link too.
+- **Resume entries share one layout.** Experience, projects, and education all use `.entries > .entry > .entry-meta + .entry-body`, a two-column grid on desktop that stacks on screens up to 720px. Add new items by reusing these classes rather than adding new markup patterns. Skills use a separate `dl.skills`.
+- **Theming is pure CSS.** Colors are custom properties on `:root`, overridden inside `@media (prefers-color-scheme: dark)`. There is no theme toggle and no JavaScript involved, so new colors must be defined as variables for both schemes.
+- **Deployment is the `main` branch root.** GitHub Pages serves `main` directly (`.nojekyll` disables Jekyll), so any push to `main` is live within a couple of minutes. Browsers cache assets for about 10 minutes, so if the `style.css` and `script.js` links in `index.html` carry a `?v=` number, bump it whenever either file changes. The CI asset-reference check tolerates the query string.
+- **CI** (`.github/workflows/ci.yml`) runs on every push and pull request, with two jobs: lint (HTML, CSS, JS) and a file-existence check. Lint rules live in `.htmlvalidate.json`, `.stylelintrc.json` (recommended config, `no-descending-specificity` off), and `eslint.config.js`. Fix the code rather than loosening a rule, unless the issue is about the rule.
+- The GitHub account is `ColeRowellLove` (the old `ColeRowell11` username no longer exists). The contact email `colerowell11@gmail.com` is still correct.
 
 ## Workflow rules
 
 1. **Every PR has an issue.** Open or find a GitHub issue before starting work, and link it in the PR (for example `Closes #12`).
 2. **One issue per PR, and nothing else.** A PR does exactly what its issue describes. Unrelated fixes, refactors, or cleanups go in their own issue and PR, even if they're small.
-3. **Every branch goes through a PR first.** Push the branch, open a pull request, and merge it on GitHub once CI is green. Never merge a branch into `main` locally and push it, and never commit or push directly to `main`. `main` is deployed to GitHub Pages on every push, so a PR is the only way changes reach the live site.
-4. **Branch from `main` using a typed name:**
-   - `feature/<name>` for new features or content
-   - `bugfix/<name>` for fixes
-   - `docs/<name>` for documentation-only changes
-   - `chore/<name>` for tooling, dependencies, and CI
-   - `refactor/<name>` for restructuring with no behavior change
-
-   Use short, lowercase, hyphenated names, for example `feature/add-projects-section` or `bugfix/mobile-nav-overflow`.
-5. **Run CI before merging.** Run `npm run lint` locally and check the page at phone and desktop widths. The GitHub Actions CI must pass on the PR before it's merged.
+3. **Every branch goes through a PR first.** Push the branch, open a pull request, and merge it on GitHub once CI is green. Never merge a branch into `main` locally and push it, and never commit or push directly to `main`.
+4. **Branch from `main` using a typed name:** `feature/<name>`, `bugfix/<name>`, `docs/<name>`, `chore/<name>`, or `refactor/<name>`. Use short, lowercase, hyphenated names, for example `feature/add-projects-section` or `bugfix/mobile-nav-overflow`.
+5. **Run CI before merging.** Run `npm run lint` locally, and the GitHub Actions CI must pass on the PR.
 6. **Keep the docs in sync.** Every change must update `README.md` and `CLAUDE.md` if anything they describe has changed (structure, commands, features, workflow, conventions). If nothing needs updating, say so in the PR.
-7. **Commit messages** are short and imperative ("Add projects section"). Claude-authored commits end with the `Co-Authored-By` trailer required by the environment.
-
-## Conventions
-
-- **Name:** the site name is "Cole Rowell-Love". Use it consistently in titles, headings, metadata, and docs.
-- **Accessibility:** keep semantic headings, the skip link, visible focus styles, and sufficient contrast in both themes. Respect `prefers-reduced-motion`.
-- **Responsive:** every change must work from 320px wide up. Check for horizontal scrolling on phones.
-- **No new runtime dependencies.** Lint tooling is a dev dependency only. Don't add frameworks or a build step without an issue that justifies it.
-- **Cache busting:** if the `style.css` and `script.js` links in `index.html` carry a `?v=` number, bump it whenever you change either file, because GitHub Pages caches assets for about 10 minutes.
-- **Lint configs** live in `.htmlvalidate.json`, `.stylelintrc.json`, and `eslint.config.js`. Fix the code rather than loosening a rule, unless the issue is about the rule.
-
-## PR checklist
-
-- [ ] Linked issue, and the PR is limited to that issue
-- [ ] Branch name follows the convention above, and the change reaches `main` through this PR
-- [ ] `npm run lint` passes and CI is green
-- [ ] Checked at phone and desktop widths
-- [ ] `README.md` and `CLAUDE.md` updated if needed
+7. **Commit messages** are short and imperative ("Add projects section"). Commits authored by Claude end with the `Co-Authored-By` trailer given in the environment.
