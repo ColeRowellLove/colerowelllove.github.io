@@ -27,6 +27,7 @@ My personal site, live at **https://colerowelllove.github.io**. It's a small mul
 │   ├── styles/       # global.css
 │   └── scripts/      # site.js: footer year, rotating topic word, scroll-reveal
 ├── public/           # favicon.svg and PNG icons, robots.txt, sitemap.xml (copied as-is)
+├── .nvmrc            # Node version for local development
 ├── astro.config.mjs
 ├── .github/workflows # ci.yml (lint and checks), deploy.yml (GitHub Pages)
 ├── LICENSE           # MIT license for the code
@@ -36,7 +37,7 @@ My personal site, live at **https://colerowelllove.github.io**. It's a small mul
 
 ## Run locally
 
-Requires [Node.js](https://nodejs.org) 22.12 or newer.
+Requires [Node.js](https://nodejs.org) 22.12 or newer; `.nvmrc` pins Node 22, so `nvm use` (or `fnm use`) picks the right version.
 
 ```bash
 npm install
