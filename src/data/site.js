@@ -4,6 +4,7 @@ export const site = {
   email: 'colerowell11@gmail.com',
   linkedin: 'https://www.linkedin.com/in/colerowelllove',
   github: 'https://github.com/ColeRowellLove',
+  employer: { name: 'Earth Dynamics AI', url: 'https://earthdynamics.ai' },
   repo: 'https://github.com/ColeRowellLove/colerowelllove.github.io',
 };
 
@@ -37,7 +38,8 @@ export const experience = [
     dates: 'May 2026 – Present',
     place: 'Vancouver, BC',
     title: 'Data Engineer',
-    org: 'EarthDynamicsAI',
+    org: 'Earth Dynamics AI',
+    orgUrl: 'https://earthdynamics.ai',
     bullets: [],
   },
   {

@@ -29,7 +29,9 @@ const recent = experience.slice(0, 3);
     </p>
     <p class="status">
       <span class="status-dot" aria-hidden="true"></span>Currently a Data Engineer at
-      EarthDynamicsAI
+      <a href={site.employer.url} target="_blank" rel="noopener">
+        {site.employer.name}
+      </a>
     </p>
     <ul class="links">
       <li>
@@ -69,7 +71,13 @@ const recent = experience.slice(0, 3);
     <h2 id="work-h">Recent work</h2>
     <div class="entries">
       {recent.map((job) => (
-        <Entry dates={job.dates} title={job.title} org={job.org} lede={job.summary} />
+        <Entry
+          dates={job.dates}
+          title={job.title}
+          org={job.org}
+          orgUrl={job.orgUrl}
+          lede={job.summary}
+        />
       ))}
     </div>
     <p class="more">

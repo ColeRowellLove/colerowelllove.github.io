@@ -6,7 +6,7 @@ import { site, experience } from '../data/site.js';
 
 <Layout
   title={`Experience | ${site.name}`}
-  description="Work experience of Cole Rowell-Love: data engineering at EarthDynamicsAI, machine learning research at UBC, ML engineering at Yakoa, software development at Sonic Incytes, and systems engineering at Kardium."
+  description="Work experience of Cole Rowell-Love: data engineering at Earth Dynamics AI, machine learning research at UBC, ML engineering at Yakoa, software development at Sonic Incytes, and systems engineering at Kardium."
   ogDescription="Machine learning research, ML engineering, and medical device software."
 >
   <section class="wrap page-head">
@@ -27,6 +27,7 @@ import { site, experience } from '../data/site.js';
           place={job.place}
           title={job.title}
           org={job.org}
+          orgUrl={job.orgUrl}
           bullets={job.bullets}
         />
       ))}
