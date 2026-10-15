@@ -64,7 +64,7 @@ export const experience = [
     bullets: [
       'Designed a scalable, provider-agnostic LLM benchmarking framework integrating OpenAI, Google, Anthropic, Mistral, and AWS APIs to evaluate image-based IP infringement detection.',
       'Improved LLM image-analysis accuracy by 5–10% through prompt optimization, multi-step reasoning chains, and grounding strategies.',
-      'Fine-tuned Gemini 1.5 Pro and Flash on proprietary IP datasets, improving recognition accuracy by 5–10% over baseline.',
+      'Fine-tuned Gemini 1.5 Pro and Flash models on proprietary IP datasets, achieving a 5–10% improvement in intellectual property recognition accuracy over baseline models.',
       'Collected 80,000+ images, built a Hugging Face API pipeline, and trained ViT and hybrid ViT-CNN classifiers to detect images containing valuable assets.',
       'Reduced classifier latency by 75% through TorchScript compilation, knowledge distillation, and INT8 quantization, enabling real-time image analysis at scale.',
     ],
@@ -118,7 +118,7 @@ export const projects = {
       bullets: [
         'Integrated OpenAI, Google, Anthropic, Mistral, and AWS APIs behind one interface.',
         'Raised image-analysis accuracy by 5–10% with prompt optimization, multi-step reasoning chains, and grounding.',
-        'Fine-tuned Gemini 1.5 Pro and Flash on proprietary IP datasets for a further 5–10% gain over baseline.',
+        'Fine-tuned Gemini 1.5 Pro and Flash models on proprietary IP datasets, achieving a 5–10% improvement in intellectual property recognition accuracy over baseline models.',
       ],
       tags: ['LLM evaluation', 'Prompt engineering', 'Fine-tuning'],
     },
