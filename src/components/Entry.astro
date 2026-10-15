@@ -4,6 +4,7 @@ const {
   place,
   title,
   org,
+  orgUrl,
   lede,
   bullets = [],
   tags = [],
@@ -31,7 +32,17 @@ const headingClass = heading === 'h2' ? 'entry-title' : undefined;
   </div>
   <div class="entry-body">
     <Heading class={headingClass}>{title}</Heading>
-    {org && <p class="org">{org}</p>}
+    {org && (
+      <p class="org">
+        {orgUrl ? (
+          <a href={orgUrl} target="_blank" rel="noopener">
+            {org}
+          </a>
+        ) : (
+          org
+        )}
+      </p>
+    )}
     {note && <p class="note">{note}</p>}
     {lede && <p class="lede">{lede}</p>}
     {bullets.length > 0 && (
