@@ -95,6 +95,9 @@ h1::after { content: ""; display: inline-block; width: 0.5em; height: 0.09em; ma
 .links li:first-child a:hover { color: var(--on-green); opacity: 0.88; }
 @keyframes blink { 50% { opacity: 0; } }
 
+.about-head { display: grid; grid-template-columns: 1fr 240px; gap: 40px; align-items: center; }
+.portrait { width: 240px; height: 240px; object-fit: cover; border: 1px solid var(--line); border-radius: 12px; background: var(--card); }
+
 /* Sections */
 .block { padding-top: 48px; padding-bottom: 8px; }
 .block + .block { margin-top: 16px; }
@@ -167,6 +170,8 @@ h3, .entry-title { font-size: 1.05rem; font-weight: 700; line-height: 1.4; margi
 
   .intro { padding-top: 40px; padding-bottom: 40px; }
   .page-head { padding-top: 40px; }
+  .about-head { grid-template-columns: 1fr; gap: 24px; }
+  .portrait { width: 160px; height: 160px; }
   .block { padding-top: 36px; }
   h2 { margin-bottom: 20px; }
 

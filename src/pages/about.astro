@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
+import portrait from '../assets/cole.jpg';
 import Entry from '../components/Entry.astro';
 import { site, skills, education, interests } from '../data/site.js';
 ---
@@ -8,10 +10,13 @@ import { site, skills, education, interests } from '../data/site.js';
   description="About Cole Rowell-Love: Engineering Physics graduate of the University of British Columbia, with skills in Python, C++, PyTorch, and machine learning tooling, plus interests in fitness, music, and AI."
   ogDescription="Education, technical skills, and interests."
 >
-  <section class="wrap page-head">
-    <p class="eyebrow">About</p>
-    <h1>About me</h1>
-    <p class="summary">I'm an Engineering Physics graduate of the University of British Columbia in Vancouver. I've worked on deep learning for medical imaging, evaluation and fine-tuning of large language models, and production computer vision, along with the software around them.</p>
+  <section class="wrap page-head about-head">
+    <div class="about-text">
+      <p class="eyebrow">About</p>
+      <h1>About me</h1>
+      <p class="summary">I'm an Engineering Physics graduate of the University of British Columbia in Vancouver. I've worked on deep learning for medical imaging, evaluation and fine-tuning of large language models, and production computer vision, along with the software around them.</p>
+    </div>
+    <Image class="portrait" src={portrait} width={480} height={480} widths={[240, 480]} sizes="240px" loading="eager" alt="Cole at graduation, smiling in a black gown and holding a UBC diploma folder" />
   </section>
 
   <section class="wrap block" aria-labelledby="skills-h">
