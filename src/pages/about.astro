@@ -3,12 +3,12 @@ import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import portrait from '../assets/cole.jpg';
 import Entry from '../components/Entry.astro';
-import { site, skills, education, interests } from '../data/site.js';
+import { site, skills, education, awards, interests } from '../data/site.js';
 ---
 <Layout
   title={`About | ${site.name}`}
-  description="About Cole Rowell-Love: Engineering Physics graduate of the University of British Columbia, with skills in Python, C++, PyTorch, and machine learning tooling, plus interests in fitness, music, and AI."
-  ogDescription="Education, technical skills, and interests."
+  description="About Cole Rowell-Love: Engineering Physics graduate of the University of British Columbia, with skills in Python, C++, PyTorch, and machine learning tooling, plus scholarships and awards and interests in fitness, music, and AI."
+  ogDescription="Education, technical skills, awards, and interests."
 >
   <section class="wrap page-head about-head">
     <div class="about-text">
@@ -30,6 +30,13 @@ import { site, skills, education, interests } from '../data/site.js';
     <h2 id="education-h">Education</h2>
     <div class="entries">
       <Entry {...education} />
+    </div>
+  </section>
+
+  <section class="wrap block" aria-labelledby="awards-h">
+    <h2 id="awards-h">Awards</h2>
+    <div class="entries">
+      {awards.map((a) => <Entry {...a} />)}
     </div>
   </section>
 

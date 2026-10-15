@@ -4,7 +4,7 @@ My personal site, live at **https://colerowelllove.github.io**. It's a small mul
 
 ## Features
 
-- Five pages: Home, Experience, Projects, About (skills, education, and interests), and Contact, plus a custom 404 page
+- Five pages: Home, Experience, Projects, About (skills, education, awards, and interests), and Contact, plus a custom 404 page
 - One shared layout, with all content kept in a single data file (`src/data/site.js`)
 - Resume content only, with a projects page that notes which work is private
 - SEO basics: per-page titles and descriptions, Open Graph tags, canonical URLs, `robots.txt`, and `sitemap.xml`
