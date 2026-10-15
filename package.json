@@ -30,5 +30,8 @@
     "prettier-plugin-astro": "^1.1.1",
     "stylelint": "^17.16.0",
     "stylelint-config-recommended": "^18.0.0"
+  },
+  "dependencies": {
+    "@fontsource/jetbrains-mono": "^5.3.0"
   }
 }
