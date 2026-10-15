@@ -34,6 +34,7 @@ My personal site, live at **https://colerowelllove.github.io**. It's a small mul
 ├── astro.config.mjs
 ├── .github/workflows # ci.yml (lint and checks), deploy.yml (GitHub Pages)
 ├── LICENSE           # MIT license for the code
+├── .mailmap          # Maps old names/emails in history to one author
 ├── README.md
 └── CLAUDE.md         # Contribution and workflow rules
 ```
