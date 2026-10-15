@@ -134,7 +134,7 @@ export const projects = {
       tags: ['Computer vision', 'Model compression', 'Hugging Face'],
     },
     {
-      dates: ['Python, OpenCV,', 'TensorFlow, ROS'],
+      dates: 'Sep – Dec 2022',
       place: 'Coursework',
       title: 'ROS autonomous vehicle',
       lede: 'An end-to-end autonomous driving system in ROS, running in the Gazebo simulator.',
@@ -143,7 +143,7 @@ export const projects = {
         'Trained a CNN via imitation learning to follow lanes and navigate from camera input.',
         'Built an OpenCV preprocessing and labeling pipeline to generate supervised training data.',
       ],
-      tags: ['Imitation learning', 'Robotics', 'Simulation'],
+      tags: ['Python', 'OpenCV', 'TensorFlow', 'ROS', 'Imitation learning', 'Simulation'],
     },
   ],
   software: [
