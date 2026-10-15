@@ -1,11 +1,160 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cole Rowell | Machine Learning Engineer</title>
+  <meta name="description" content="Cole Rowell: Engineering Physics graduate from UBC building machine learning systems, from medical imaging research to production LLM pipelines.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    This is the first time for me in the marvel universe
+  <header class="nav">
+    <a class="brand" href="#top">Cole Rowell</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="theme" aria-label="Toggle dark mode">◐</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">Machine Learning · Engineering Physics</p>
+      <h1>Hi, I'm Cole.<br>I build machine learning systems that work in the real world.</h1>
+      <p class="lead">Engineering Physics graduate from the University of British Columbia, with experience across medical imaging research, LLM evaluation, and production computer vision.</p>
+      <div class="cta">
+        <a class="btn primary" href="#experience">See my work</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <div class="about">
+        <p>I recently completed a B.A.Sc. in Engineering Physics at UBC (September 2020 to May 2026) with a 90.4% cumulative average. Across four co-ops and a research position, I've worked on deep learning for echocardiography, benchmarked and fine-tuned frontier LLMs, shipped faster inference pipelines, and built full-stack medical device software.</p>
+        <ul class="stats">
+          <li><strong>90.4%</strong><span>Cumulative average</span></li>
+          <li><strong>75%</strong><span>Classifier latency reduction</span></li>
+          <li><strong>80k+</strong><span>Images collected and modelled</span></li>
+          <li><strong>95%</strong><span>Faster data extraction</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="timeline">
+
+        <article class="job">
+          <div class="meta"><span class="date">May – Aug 2025</span><span class="place">Vancouver, BC</span></div>
+          <div>
+            <h3>Machine Learning Researcher <small>NSERC-URSA</small></h3>
+            <p class="org">UBC Robotics and Control Laboratory (RCL)</p>
+            <ul>
+              <li>Reimplemented Stanford's EchoPrime multimodal deep-learning architecture to generate structured echocardiography reports from multi-view ultrasound videos, adapting the pipeline to UBC's proprietary clinical dataset.</li>
+              <li>Fine-tuned a text encoder using contrastive learning on millions of echo videos and thousands of cardiac reports to improve video–report alignment, strengthening clinical interpretability and downstream retrieval performance.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="meta"><span class="date">Jan – May 2025</span><span class="place">Vancouver, BC</span></div>
+          <div>
+            <h3>Machine Learning Engineer <small>Co-op</small></h3>
+            <p class="org">Yakoa, Inc.</p>
+            <ul>
+              <li>Designed a scalable, provider-agnostic LLM benchmarking framework integrating OpenAI, Google, Anthropic, Mistral, and AWS APIs to evaluate image-based IP infringement detection.</li>
+              <li>Improved LLM image-analysis accuracy by 5–10% through prompt optimization, multi-step reasoning chains, and grounding strategies.</li>
+              <li>Fine-tuned Gemini 1.5 Pro and Flash on proprietary IP datasets, gaining 5–10% in recognition accuracy over baseline.</li>
+              <li>Collected 80,000+ images, built a Hugging Face API pipeline, and trained ViT and hybrid ViT-CNN classifiers to detect images containing valuable assets.</li>
+              <li>Cut classifier latency by 75% using TorchScript compilation, knowledge distillation, and INT8 quantization, enabling real-time analysis at scale.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="meta"><span class="date">May – Dec 2024</span><span class="place">Vancouver, BC</span></div>
+          <div>
+            <h3>Junior Software Developer <small>Co-op</small></h3>
+            <p class="org">Sonic Incytes Medical Corp.</p>
+            <ul>
+              <li>Developed full-stack medical device software for liver health assessment in a 3-person agile team, building a web-based diagnostic platform (HTML, CSS, JavaScript, Python, C++).</li>
+              <li>Designed a C++/JavaScript backend with a WebSocket server for low-latency data exchange between device code and a browser GUI.</li>
+              <li>Built a Python REST API managing SQLite databases, supporting reliable CRUD operations for patient and device records.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="meta"><span class="date">Sep – Dec 2023</span><span class="place">Burnaby, BC</span></div>
+          <div>
+            <h3>Software Systems Engineering <small>Co-op</small></h3>
+            <p class="org">Kardium, Inc.</p>
+            <ul>
+              <li>Analyzed time-series data from cardiac ablation systems in MATLAB, building visualization pipelines for electrical signal analysis and system performance monitoring.</li>
+              <li>Refactored MATLAB data-handling classes, reducing self-test data-extraction runtime by 95%.</li>
+              <li>Resolved reported system issues by correlating performance data with hardware and software specifications.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <article class="card">
+        <h3>ROS Autonomous Vehicle</h3>
+        <p>An end-to-end autonomous driving system built in ROS, with neural networks for perception and control running in the Gazebo simulator.</p>
+        <ul>
+          <li>Trained a CNN via imitation learning for lane-following and navigation from camera input.</li>
+          <li>Built an OpenCV preprocessing and labeling pipeline to generate supervised training data.</li>
+        </ul>
+        <p class="tags"><span>Python</span><span>OpenCV</span><span>TensorFlow</span><span>ROS</span></p>
+      </article>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div>
+          <h3>Languages</h3>
+          <p class="tags"><span>Python</span><span>C++</span><span>MATLAB</span><span>Java</span><span>SQL</span></p>
+        </div>
+        <div>
+          <h3>ML &amp; Data Science</h3>
+          <p class="tags"><span>PyTorch</span><span>TensorFlow / Keras</span><span>Hugging Face</span><span>OpenCV</span><span>scikit-learn</span><span>NumPy</span><span>Pandas</span><span>Matplotlib</span></p>
+        </div>
+        <div>
+          <h3>Tools</h3>
+          <p class="tags"><span>Docker</span><span>AWS</span><span>GCP</span><span>Git</span><span>Linux</span><span>Jira</span><span>Confluence</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <article class="card">
+        <h3>University of British Columbia</h3>
+        <p>Bachelor of Applied Science, Engineering Physics · Vancouver, BC<br>September 2020 – May 2026 · Cumulative average 90.4%</p>
+      </article>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="lead">I'm open to machine learning and software roles. The best way to reach me is by email.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:colerowell11@gmail.com">colerowell11@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/colerowell" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/ColeRowell11" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Cole Rowell</footer>
+  <script src="script.js"></script>
 </body>
 </html>
