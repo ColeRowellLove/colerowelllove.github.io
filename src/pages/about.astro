@@ -7,7 +7,7 @@ import { site, skills, education, awards, interests } from '../data/site.js';
 ---
 <Layout
   title={`About | ${site.name}`}
-  description="About Cole Rowell-Love: Engineering Physics graduate of the University of British Columbia, with skills in Python, C++, PyTorch, and machine learning tooling, plus scholarships and awards and interests in fitness, music, and AI."
+  description="About Cole Rowell-Love: Engineering Physics graduate of the University of British Columbia, with skills in Python, C++, PyTorch, and machine learning tooling, plus scholarships and awards and interests in fitness, sports, music, and AI."
   ogDescription="Education, technical skills, awards, and interests."
 >
   <section class="wrap page-head about-head">
@@ -41,9 +41,17 @@ import { site, skills, education, awards, interests } from '../data/site.js';
   </section>
 
   <section class="wrap block" aria-labelledby="interests-h">
-    <h2 id="interests-h">Interests</h2>
+    <h2 id="interests-h">Outside work</h2>
     <dl class="skills">
-      {interests.map((s) => <div><dt>{s.label}</dt><dd>{s.value}</dd></div>)}
+      {interests.map((s) => (
+        <div>
+          <dt>{s.label}</dt>
+          <dd>
+            <p class="pick"><span class="pick-kind">{s.pick.kind}</span>{s.pick.text}</p>
+            <p class="also">Also: {s.also}</p>
+          </dd>
+        </div>
+      ))}
     </dl>
   </section>
 
