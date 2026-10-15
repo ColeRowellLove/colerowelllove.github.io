@@ -62,4 +62,4 @@ A GitHub Actions workflow (`.github/workflows/deploy.yml`) builds the site and p
 
 ## Contact
 
-[colerowell11@gmail.com](mailto:colerowell11@gmail.com) · [LinkedIn](https://www.linkedin.com/in/colerowell) · [GitHub](https://github.com/ColeRowellLove)
+[colerowell11@gmail.com](mailto:colerowell11@gmail.com) · [LinkedIn](https://www.linkedin.com/in/colerowelllove) · [GitHub](https://github.com/ColeRowellLove)
