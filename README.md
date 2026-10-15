@@ -1,10 +1,12 @@
 # Cole Rowell-Love: Personal Website
 
-My personal site, live at **https://colerowelllove.github.io**. It's a single-page static site built with plain HTML, CSS, and JavaScript (no frameworks, no build step).
+My personal site, live at **https://colerowelllove.github.io**. It's a small multi-page static site built with plain HTML, CSS, and JavaScript (no frameworks, no build step).
 
 ## Features
 
-- Resume content presented as experience, projects, skills, and education
+- Five pages: Home, Experience, Projects, About (skills and education), and Contact, plus a custom 404 page
+- Resume content only, with a projects page that notes which work is private
+- SEO basics: per-page titles and descriptions, Open Graph tags, canonical URLs, `robots.txt`, and `sitemap.xml`
 - Clean typographic design, with automatic light and dark mode (follows system setting)
 - Responsive layout that works from phone to desktop, with a scrollable navigation bar on small screens
 - Accessible markup: skip link, keyboard focus styles, semantic headings, reduced-motion support
@@ -14,9 +16,17 @@ My personal site, live at **https://colerowelllove.github.io**. It's a single-pa
 
 ```
 .
-├── index.html   # Page content and structure
-├── style.css    # Styling and responsive layout
-├── script.js    # Footer year and active-section nav highlight
+├── index.html       # Home
+├── experience.html  # Work history
+├── projects.html    # Selected projects
+├── about.html       # Skills and education
+├── contact.html     # Email and profile links
+├── 404.html         # Not-found page
+├── style.css        # Styling and responsive layout
+├── script.js        # Footer year
+├── favicon.svg
+├── robots.txt
+├── sitemap.xml
 ├── README.md
 └── CLAUDE.md    # Contribution and workflow rules
 ```
@@ -40,7 +50,7 @@ npm install
 npm run lint
 ```
 
-This runs `html-validate` on the HTML, `stylelint` on the CSS, and `eslint` on the JavaScript. The same checks run in GitHub Actions on every pull request and on pushes to `main` (see `.github/workflows/ci.yml`). Dependabot opens monthly update PRs for the dev dependencies and the workflow actions.
+This runs `html-validate` on every page, `stylelint` on the CSS, and `eslint` on the JavaScript. The same checks run in GitHub Actions on every pull request and on pushes to `main` (see `.github/workflows/ci.yml`). Dependabot opens monthly update PRs for the dev dependencies and the workflow actions.
 
 `npm install` also sets up a [husky](https://typicode.github.io/husky/) pre-commit hook (`.husky/pre-commit`) that runs `npm run lint` before every commit, so lint errors are caught locally. Don't bypass it with `--no-verify`.
 
