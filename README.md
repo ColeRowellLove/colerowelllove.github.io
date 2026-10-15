@@ -24,7 +24,7 @@ My personal site, live at **https://colerowelllove.github.io**. It's a small mul
 │   ├── data/site.js  # All page content: experience, projects, skills, interests
 │   ├── styles/       # global.css
 │   └── scripts/      # site.js: footer year, rotating topic word, scroll-reveal
-├── public/           # favicon.svg, robots.txt, sitemap.xml (copied as-is)
+├── public/           # favicon.svg and PNG icons, robots.txt, sitemap.xml (copied as-is)
 ├── astro.config.mjs
 ├── .github/workflows # ci.yml (lint and checks), deploy.yml (GitHub Pages)
 ├── README.md
