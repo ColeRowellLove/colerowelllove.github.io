@@ -1,0 +1,5 @@
+# Map every historical name and email for the same person to one identity.
+# Used by git shortlog, git log --use-mailmap, and git blame; GitHub's contributor graph ignores it.
+Cole Rowell-Love <90155416+ColeRowellLove@users.noreply.github.com> Cole Rowell <colerowell11@gmail.com>
+Cole Rowell-Love <90155416+ColeRowellLove@users.noreply.github.com> Cole Rowell <cxlerxwell@gmail.com>
+Cole Rowell-Love <90155416+ColeRowellLove@users.noreply.github.com> <90155416+ColeRowell11@users.noreply.github.com>
