@@ -8,7 +8,8 @@ My personal site, live at **https://colerowelllove.github.io**. It's a small mul
 - One shared layout, with all content kept in a single data file (`src/data/site.js`)
 - Resume content only, with a projects page that notes which work is private
 - SEO basics: per-page titles and descriptions, Open Graph tags, canonical URLs, `robots.txt`, and `sitemap.xml`
-- Terminal-inspired design in JetBrains Mono: prompt-style headings, a blinking cursor, a rotating topic line, and scroll-reveal cards, dark by default with a light variant (follows system setting)
+- Terminal-inspired design in JetBrains Mono: prompt-style headings, a blinking cursor, a rotating topic line, and scroll-reveal cards
+- Dark and light mode: follows the OS by default, with a header toggle that remembers your choice
 - Responsive layout that works from phone to desktop, with a scrollable navigation bar on small screens
 - Accessible markup: skip link, keyboard focus styles, semantic headings, reduced-motion support (animations are off when the OS asks for less motion)
 - Print-friendly styles
