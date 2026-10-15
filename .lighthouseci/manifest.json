@@ -1,0 +1,62 @@
+[
+  {
+    "url": "http://localhost:4321/",
+    "isRepresentativeRun": true,
+    "htmlPath": "C:\\Users\\colem\\OneDrive\\Desktop\\colerowell11.github.io\\.lighthouseci\\localhost--2026_10_15_06_28_06.report.html",
+    "jsonPath": "C:\\Users\\colem\\OneDrive\\Desktop\\colerowell11.github.io\\.lighthouseci\\localhost--2026_10_15_06_28_06.report.json",
+    "summary": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    }
+  },
+  {
+    "url": "http://localhost:4321/experience",
+    "isRepresentativeRun": true,
+    "htmlPath": "C:\\Users\\colem\\OneDrive\\Desktop\\colerowell11.github.io\\.lighthouseci\\localhost-experience-2026_10_15_06_28_19.report.html",
+    "jsonPath": "C:\\Users\\colem\\OneDrive\\Desktop\\colerowell11.github.io\\.lighthouseci\\localhost-experience-2026_10_15_06_28_19.report.json",
+    "summary": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    }
+  },
+  {
+    "url": "http://localhost:4321/projects",
+    "isRepresentativeRun": true,
+    "htmlPath": "C:\\Users\\colem\\OneDrive\\Desktop\\colerowell11.github.io\\.lighthouseci\\localhost-projects-2026_10_15_06_28_30.report.html",
+    "jsonPath": "C:\\Users\\colem\\OneDrive\\Desktop\\colerowell11.github.io\\.lighthouseci\\localhost-projects-2026_10_15_06_28_30.report.json",
+    "summary": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    }
+  },
+  {
+    "url": "http://localhost:4321/about",
+    "isRepresentativeRun": true,
+    "htmlPath": "C:\\Users\\colem\\OneDrive\\Desktop\\colerowell11.github.io\\.lighthouseci\\localhost-about-2026_10_15_06_28_42.report.html",
+    "jsonPath": "C:\\Users\\colem\\OneDrive\\Desktop\\colerowell11.github.io\\.lighthouseci\\localhost-about-2026_10_15_06_28_42.report.json",
+    "summary": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    }
+  },
+  {
+    "url": "http://localhost:4321/contact",
+    "isRepresentativeRun": true,
+    "htmlPath": "C:\\Users\\colem\\OneDrive\\Desktop\\colerowell11.github.io\\.lighthouseci\\localhost-contact-2026_10_15_06_28_54.report.html",
+    "jsonPath": "C:\\Users\\colem\\OneDrive\\Desktop\\colerowell11.github.io\\.lighthouseci\\localhost-contact-2026_10_15_06_28_54.report.json",
+    "summary": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    }
+  }
+]
