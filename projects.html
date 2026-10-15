@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Cole Rowell-Love</title>
+  <meta name="description" content="Selected projects by Cole Rowell-Love: echocardiography report generation, an LLM benchmarking framework, production image classifiers, medical device software, and an autonomous vehicle in ROS.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://colerowelllove.github.io/projects.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects | Cole Rowell-Love">
+  <meta property="og:description" content="Selected machine learning and software projects.">
+  <meta property="og:url" content="https://colerowelllove.github.io/projects.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="wordmark" href="index.html">Cole Rowell-Love</a>
+      <nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="wrap page-head">
+      <p class="eyebrow">Projects</p>
+      <h1>Selected projects</h1>
+      <p class="summary">Most of this work was done for employers, a research lab, or coursework, so the source code is private. The one public repository is this website; I'm happy to talk through any of the rest.</p>
+    </section>
+
+    <section class="wrap block" aria-labelledby="ml-h">
+      <h2 id="ml-h">Machine learning</h2>
+      <div class="entries">
+
+        <article class="entry">
+          <div class="entry-meta">
+            <p class="dates">2025</p>
+            <p class="place">UBC research</p>
+          </div>
+          <div class="entry-body">
+            <h3>Echocardiography report generation</h3>
+            <p class="lede">A reimplementation of Stanford's EchoPrime that generates structured reports from multi-view ultrasound videos.</p>
+            <ul>
+              <li>Adapted the pipeline to UBC's proprietary clinical dataset.</li>
+              <li>Fine-tuned a text encoder with contrastive learning on millions of echo videos and thousands of cardiac reports to improve video–report alignment.</li>
+            </ul>
+            <ul class="tags" aria-label="Topics">
+              <li>Multimodal learning</li>
+              <li>Contrastive learning</li>
+              <li>Medical imaging</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-meta">
+            <p class="dates">2025</p>
+            <p class="place">Yakoa</p>
+          </div>
+          <div class="entry-body">
+            <h3>LLM benchmarking framework</h3>
+            <p class="lede">A provider-agnostic framework for comparing LLMs on image-based IP infringement detection.</p>
+            <ul>
+              <li>Integrated OpenAI, Google, Anthropic, Mistral, and AWS APIs behind one interface.</li>
+              <li>Raised image-analysis accuracy by 5–10% with prompt optimization, multi-step reasoning chains, and grounding.</li>
+              <li>Fine-tuned Gemini 1.5 Pro and Flash on proprietary IP datasets for a further 5–10% gain over baseline.</li>
+            </ul>
+            <ul class="tags" aria-label="Topics">
+              <li>LLM evaluation</li>
+              <li>Prompt engineering</li>
+              <li>Fine-tuning</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-meta">
+            <p class="dates">2025</p>
+            <p class="place">Yakoa</p>
+          </div>
+          <div class="entry-body">
+            <h3>Real-time image classifier</h3>
+            <p class="lede">ViT and hybrid ViT-CNN models that detect images containing valuable assets.</p>
+            <ul>
+              <li>Collected 80,000+ images and built a Hugging Face API pipeline for training data.</li>
+              <li>Cut latency by 75% with TorchScript compilation, knowledge distillation, and INT8 quantization.</li>
+            </ul>
+            <ul class="tags" aria-label="Topics">
+              <li>Computer vision</li>
+              <li>Model compression</li>
+              <li>Hugging Face</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-meta">
+            <p class="dates">Python, OpenCV,<br>TensorFlow, ROS</p>
+            <p class="place">Coursework</p>
+          </div>
+          <div class="entry-body">
+            <h3>ROS autonomous vehicle</h3>
+            <p class="lede">An end-to-end autonomous driving system in ROS, running in the Gazebo simulator.</p>
+            <ul>
+              <li>Deployed neural networks for perception and control.</li>
+              <li>Trained a CNN via imitation learning to follow lanes and navigate from camera input.</li>
+              <li>Built an OpenCV preprocessing and labeling pipeline to generate supervised training data.</li>
+            </ul>
+            <ul class="tags" aria-label="Topics">
+              <li>Imitation learning</li>
+              <li>Robotics</li>
+              <li>Simulation</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="wrap block" aria-labelledby="sw-h">
+      <h2 id="sw-h">Software</h2>
+      <div class="entries">
+
+        <article class="entry">
+          <div class="entry-meta">
+            <p class="dates">2024</p>
+            <p class="place">Sonic Incytes</p>
+          </div>
+          <div class="entry-body">
+            <h3>Liver health assessment platform</h3>
+            <p class="lede">A web-based diagnostic platform for a medical device, built in a 3-person agile team.</p>
+            <ul>
+              <li>C++/JavaScript backend with a WebSocket server for low-latency data exchange between device code and a browser GUI.</li>
+              <li>Python REST API managing SQLite databases for patient and device records.</li>
+            </ul>
+            <ul class="tags" aria-label="Topics">
+              <li>C++</li>
+              <li>Python</li>
+              <li>WebSockets</li>
+              <li>REST</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-meta">
+            <p class="dates">2026</p>
+            <p class="place">Personal</p>
+          </div>
+          <div class="entry-body">
+            <h3>This website</h3>
+            <p class="lede">A static site in plain HTML, CSS, and JavaScript with no framework or build step.</p>
+            <ul>
+              <li>Automatic light and dark themes, a responsive layout, and accessible markup.</li>
+              <li>Linted in CI and deployed with GitHub Pages.</li>
+            </ul>
+            <ul class="tags" aria-label="Topics">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>GitHub Actions</li>
+            </ul>
+            <p class="more"><a href="https://github.com/ColeRowellLove/colerowelllove.github.io" target="_blank" rel="noopener">View source on GitHub</a></p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap site-footer">
+    <p>© <span id="year">2026</span> Cole Rowell-Love</p>
+  </footer>
+  <script src="script.js?v=4"></script>
+</body>
+</html>
