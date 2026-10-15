@@ -1,4 +1,8 @@
 ---
+import '@fontsource/jetbrains-mono/latin-400.css';
+import '@fontsource/jetbrains-mono/latin-500.css';
+import '@fontsource/jetbrains-mono/latin-700.css';
+import font400 from '@fontsource/jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff2?url';
 import '../styles/global.css';
 import { site, nav } from '../data/site.js';
 
@@ -29,12 +33,7 @@ const canonical = site.url + (path === '/' ? '/' : path);
     <meta property="og:description" content={ogDescription} />
     {!noindex && <meta property="og:url" content={canonical} />}
     <meta name="twitter:card" content="summary" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href={font400} as="font" type="font/woff2" crossorigin />
     <script is:inline>
       try {
         var saved = localStorage.getItem('theme');
