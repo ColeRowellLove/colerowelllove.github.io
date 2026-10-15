@@ -1,0 +1,38 @@
+name: Bug or broken page
+description: Something on the site looks wrong or doesn't work
+labels: [bug]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: Which page, or the full URL?
+      placeholder: https://colerowelllove.github.io/about
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you see, and what did you expect instead?
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and device
+      description: For example, Safari on iPhone 15, or Chrome 130 on Windows.
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Dark or light mode
+      options:
+        - Dark
+        - Light
+        - Both
+        - Not sure
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Drag images here if they help.

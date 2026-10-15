@@ -32,8 +32,10 @@ My personal site, live at **https://colerowelllove.github.io**. It's a small mul
 ├── scripts/          # a11y.mjs: axe-core accessibility check on the built site
 ├── .lighthouserc.json # Lighthouse CI budgets (performance, accessibility, best practices, SEO)
 ├── astro.config.mjs
-├── .github/workflows # ci.yml (lint and checks), deploy.yml (GitHub Pages)
+├── .github/          # workflows (ci.yml, deploy.yml), issue templates, PR template
 ├── LICENSE           # MIT license for the code
+├── CONTRIBUTING.md   # How to report problems or contribute
+├── CODE_OF_CONDUCT.md # Contributor Covenant 2.1
 ├── .mailmap          # Maps old names/emails in history to one author
 ├── README.md
 └── CLAUDE.md         # Contribution and workflow rules
@@ -66,6 +68,10 @@ Workflow: every change starts from an issue, gets its own typed branch off `main
 ## Deployment
 
 A GitHub Actions workflow (`.github/workflows/deploy.yml`) builds the site and publishes `dist/` to GitHub Pages on every push to `main`. In the repository settings, Pages uses the "GitHub Actions" source. Astro content-hashes the CSS and JS filenames, so browsers never serve a stale stylesheet with a new page.
+
+## Contributing
+
+Bug reports and corrections are welcome through the issue templates; see [`CONTRIBUTING.md`](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md). The site's written content is Cole's own, so content changes aren't accepted as pull requests.
 
 ## License
 
