@@ -1,6 +1,6 @@
 # Cole Rowell-Love: Personal Website
 
-My personal site, live at **https://colerowell11.github.io**. It's a single-page static site built with plain HTML, CSS, and JavaScript (no frameworks, no build step).
+My personal site, live at **https://colerowelllove.github.io**. It's a single-page static site built with plain HTML, CSS, and JavaScript (no frameworks, no build step).
 
 ## Features
 
@@ -49,4 +49,4 @@ Hosted with GitHub Pages from the `main` branch. Pushing to `main` updates the l
 
 ## Contact
 
-[colerowell11@gmail.com](mailto:colerowell11@gmail.com) · [LinkedIn](https://www.linkedin.com/in/colerowell) · [GitHub](https://github.com/ColeRowell11)
+[colerowell11@gmail.com](mailto:colerowell11@gmail.com) · [LinkedIn](https://www.linkedin.com/in/colerowell) · [GitHub](https://github.com/ColeRowellLove)
