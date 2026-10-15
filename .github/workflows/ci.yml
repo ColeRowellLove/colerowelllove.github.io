@@ -75,3 +75,34 @@ jobs:
               test -f "$f" || { echo "$page links to a missing target: $href"; exit 1; }
             done
           done
+
+  a11y-perf:
+    name: Accessibility and performance
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Build the site
+        run: npm run build
+
+      - name: Accessibility (axe, WCAG A and AA, dark and light)
+        run: node scripts/a11y.mjs
+
+      - name: Performance and best practices (Lighthouse CI)
+        run: npx --yes @lhci/cli@0.15.1 autorun
+
+      - name: Upload Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: lighthouse-reports
+          path: .lighthouseci
+          retention-days: 14
