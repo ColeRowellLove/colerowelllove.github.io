@@ -44,12 +44,14 @@ jobs:
 
       - name: Required files exist
         run: |
-          for f in index.html style.css script.js README.md; do
+          for f in index.html experience.html projects.html about.html contact.html 404.html style.css script.js favicon.svg robots.txt sitemap.xml README.md; do
             test -f "$f" || { echo "Missing $f"; exit 1; }
           done
 
       - name: Local asset references resolve
         run: |
-          for f in $(grep -oE '(href|src)="[^"#:?]+\.(css|js)(\?[^"]*)?"' index.html | sed -E 's/.*="([^"?]+).*/\1/'); do
-            test -f "$f" || { echo "index.html references missing file: $f"; exit 1; }
+          for page in *.html; do
+            for f in $(grep -oE '(href|src)="[^"#:?]+\.(css|js|svg|html)(\?[^"]*)?"' "$page" | sed -E 's/.*="([^"?]+).*/\1/; s#^/##'); do
+              test -f "$f" || { echo "$page references missing file: $f"; exit 1; }
+            done
           done

@@ -7,7 +7,7 @@
   "scripts": {
     "serve": "python -m http.server 8000",
     "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
-    "lint:html": "html-validate index.html",
+    "lint:html": "html-validate \"*.html\"",
     "lint:css": "stylelint style.css",
     "lint:js": "eslint script.js eslint.config.js"
   },

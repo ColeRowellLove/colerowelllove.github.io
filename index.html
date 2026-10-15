@@ -6,186 +6,99 @@
   <title>Cole Rowell-Love | Machine Learning Engineer</title>
   <meta name="description" content="Cole Rowell-Love is a machine learning engineer and Engineering Physics graduate of the University of British Columbia, with experience in medical imaging research, LLM evaluation, and production computer vision.">
   <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://colerowelllove.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cole Rowell-Love | Machine Learning Engineer">
+  <meta property="og:description" content="Machine learning engineer: medical imaging research, LLM evaluation, and production computer vision.">
+  <meta property="og:url" content="https://colerowelllove.github.io/">
+  <meta name="twitter:card" content="summary">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="wrap bar">
-      <a class="wordmark" href="#top">Cole Rowell-Love</a>
+      <a class="wordmark" href="index.html">Cole Rowell-Love</a>
       <nav aria-label="Primary">
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <section class="intro wrap" id="top">
+    <section class="intro wrap">
       <p class="eyebrow">Machine Learning Engineer</p>
       <h1>Cole Rowell-Love</h1>
       <p class="summary">I'm an Engineering Physics graduate of the University of British Columbia. My work spans deep learning for medical imaging, evaluation and fine-tuning of large language models, and production computer vision.</p>
       <ul class="links">
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
         <li><a href="mailto:colerowell11@gmail.com">Email</a></li>
         <li><a href="https://www.linkedin.com/in/colerowell" target="_blank" rel="noopener">LinkedIn</a></li>
         <li><a href="https://github.com/ColeRowellLove" target="_blank" rel="noopener">GitHub</a></li>
       </ul>
     </section>
 
-    <section class="wrap block" id="experience">
-      <h2>Experience</h2>
-      <div class="entries">
+    <section class="wrap block" aria-labelledby="highlights-h">
+      <h2 id="highlights-h">Highlights</h2>
+      <ul class="stats">
+        <li><strong>75%</strong> lower classifier latency through TorchScript, distillation, and INT8 quantization</li>
+        <li><strong>80,000+</strong> images collected to train ViT and hybrid ViT-CNN classifiers</li>
+        <li><strong>95%</strong> shorter self-test data-extraction runtime after refactoring MATLAB data handling</li>
+        <li><strong>5–10%</strong> accuracy gains for LLM image analysis from prompt optimization and fine-tuning</li>
+      </ul>
+    </section>
 
+    <section class="wrap block" aria-labelledby="work-h">
+      <h2 id="work-h">Recent work</h2>
+      <div class="entries">
         <article class="entry">
           <div class="entry-meta">
             <p class="dates">May – Aug 2025</p>
-            <p class="place">Vancouver, BC</p>
           </div>
           <div class="entry-body">
             <h3>Machine Learning Researcher</h3>
             <p class="org">UBC Robotics and Control Laboratory (NSERC-URSA)</p>
-            <ul>
-              <li>Reimplemented Stanford's EchoPrime multimodal deep-learning architecture to generate structured echocardiography reports from multi-view ultrasound videos, adapting the pipeline to UBC's proprietary clinical dataset.</li>
-              <li>Fine-tuned a text encoder using contrastive learning on millions of echo videos and thousands of cardiac reports to improve video–report alignment, strengthening clinical interpretability and downstream retrieval performance.</li>
-            </ul>
+            <p class="lede">Echocardiography report generation from multi-view ultrasound video.</p>
           </div>
         </article>
-
         <article class="entry">
           <div class="entry-meta">
             <p class="dates">Jan – May 2025</p>
-            <p class="place">Vancouver, BC</p>
           </div>
           <div class="entry-body">
             <h3>Machine Learning Engineer, Co-op</h3>
             <p class="org">Yakoa, Inc.</p>
-            <ul>
-              <li>Designed a scalable, provider-agnostic LLM benchmarking framework integrating OpenAI, Google, Anthropic, Mistral, and AWS APIs to evaluate image-based IP infringement detection.</li>
-              <li>Improved LLM image-analysis accuracy by 5–10% through prompt optimization, multi-step reasoning chains, and grounding strategies.</li>
-              <li>Fine-tuned Gemini 1.5 Pro and Flash on proprietary IP datasets, improving recognition accuracy by 5–10% over baseline.</li>
-              <li>Collected 80,000+ images, built a Hugging Face API pipeline, and trained ViT and hybrid ViT-CNN classifiers to detect images containing valuable assets.</li>
-              <li>Reduced classifier latency by 75% through TorchScript compilation, knowledge distillation, and INT8 quantization, enabling real-time image analysis at scale.</li>
-            </ul>
+            <p class="lede">LLM benchmarking and fast image classifiers for IP infringement detection.</p>
           </div>
         </article>
-
         <article class="entry">
           <div class="entry-meta">
             <p class="dates">May – Dec 2024</p>
-            <p class="place">Vancouver, BC</p>
           </div>
           <div class="entry-body">
             <h3>Junior Software Developer, Co-op</h3>
             <p class="org">Sonic Incytes Medical Corp.</p>
-            <ul>
-              <li>Developed full-stack medical device software for liver health assessment in a 3-person agile team, building a web-based diagnostic platform (HTML, CSS, JavaScript, Python, C++).</li>
-              <li>Designed a C++/JavaScript backend with a WebSocket server for low-latency data exchange between device code and a browser-based GUI.</li>
-              <li>Built a Python REST API to manage SQLite databases, supporting reliable CRUD operations for patient and device records.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="entry">
-          <div class="entry-meta">
-            <p class="dates">Sep – Dec 2023</p>
-            <p class="place">Burnaby, BC</p>
-          </div>
-          <div class="entry-body">
-            <h3>Software Systems Engineering, Co-op</h3>
-            <p class="org">Kardium, Inc.</p>
-            <ul>
-              <li>Analyzed time-series data from cardiac ablation systems using MATLAB, developing visualization pipelines for electrical signal analysis and system performance monitoring.</li>
-              <li>Refactored MATLAB data-handling classes, reducing self-test data-extraction runtime by 95%.</li>
-              <li>Diagnosed and resolved reported system issues by correlating performance data with hardware and software specifications.</li>
-            </ul>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <section class="wrap block" id="projects">
-      <h2>Projects</h2>
-      <div class="entries">
-        <article class="entry">
-          <div class="entry-meta">
-            <p class="dates">Python, OpenCV,<br>TensorFlow, ROS</p>
-          </div>
-          <div class="entry-body">
-            <h3>ROS Autonomous Vehicle</h3>
-            <ul>
-              <li>Developed an end-to-end autonomous driving system in the ROS framework, deploying neural networks for perception and control in the Gazebo simulation environment.</li>
-              <li>Trained a CNN via imitation learning to perform lane-following and navigation from camera inputs.</li>
-              <li>Built an OpenCV-based data preprocessing and labeling pipeline to generate training data for supervised learning.</li>
-            </ul>
+            <p class="lede">Full-stack software for a liver health assessment device.</p>
           </div>
         </article>
       </div>
-    </section>
-
-    <section class="wrap block" id="skills">
-      <h2>Skills</h2>
-      <dl class="skills">
-        <div>
-          <dt>Programming languages</dt>
-          <dd>Python, C++, MATLAB, Java, SQL</dd>
-        </div>
-        <div>
-          <dt>ML and data science</dt>
-          <dd>PyTorch, TensorFlow/Keras, Hugging Face, OpenCV, scikit-learn, NumPy, Pandas, Matplotlib</dd>
-        </div>
-        <div>
-          <dt>Tools</dt>
-          <dd>Docker, AWS, GCP, Git, Linux, Jira, Confluence</dd>
-        </div>
-      </dl>
-    </section>
-
-    <section class="wrap block" id="education">
-      <h2>Education</h2>
-      <div class="entries">
-        <article class="entry">
-          <div class="entry-meta">
-            <p class="dates">Sep 2020 – May 2026</p>
-            <p class="place">Vancouver, BC</p>
-          </div>
-          <div class="entry-body">
-            <h3>University of British Columbia</h3>
-            <p class="org">Bachelor of Applied Science, Engineering Physics</p>
-            <p class="note">Cumulative average: 90.4%</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="wrap block" id="contact">
-      <h2>Contact</h2>
-      <div class="entries">
-        <div class="entry">
-          <div class="entry-meta"></div>
-          <div class="entry-body">
-            <p class="contact-line">The best way to reach me is by email.</p>
-            <ul class="contact-list">
-              <li><a href="mailto:colerowell11@gmail.com">colerowell11@gmail.com</a></li>
-              <li><a href="https://www.linkedin.com/in/colerowell" target="_blank" rel="noopener">linkedin.com/in/colerowell</a></li>
-              <li><a href="https://github.com/ColeRowellLove" target="_blank" rel="noopener">github.com/ColeRowellLove</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <p class="more"><a href="experience.html">See all experience</a> · <a href="projects.html">Browse projects</a></p>
     </section>
   </main>
 
   <footer class="wrap site-footer">
     <p>© <span id="year">2026</span> Cole Rowell-Love</p>
   </footer>
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
