@@ -104,7 +104,7 @@ export const experience = [
 export const projects = {
   ml: [
     {
-      dates: '2025',
+      dates: 'May – Aug 2025',
       place: 'UBC research',
       title: 'Echocardiography report generation',
       lede: "A reimplementation of Stanford's EchoPrime that generates structured reports from multi-view ultrasound videos.",
@@ -115,7 +115,7 @@ export const projects = {
       tags: ['Multimodal learning', 'Contrastive learning', 'Medical imaging'],
     },
     {
-      dates: '2025',
+      dates: 'Jan – May 2025',
       place: 'Yakoa',
       title: 'LLM benchmarking framework',
       lede: 'A provider-agnostic framework for comparing LLMs on image-based IP infringement detection.',
@@ -127,7 +127,7 @@ export const projects = {
       tags: ['LLM evaluation', 'Prompt engineering', 'Fine-tuning'],
     },
     {
-      dates: '2025',
+      dates: 'Jan – May 2025',
       place: 'Yakoa',
       title: 'Real-time image classifier',
       lede: 'ViT and hybrid ViT-CNN models that detect images containing valuable assets.',
@@ -152,18 +152,7 @@ export const projects = {
   ],
   software: [
     {
-      dates: '2024',
-      place: 'Sonic Incytes',
-      title: 'Liver health assessment platform',
-      lede: 'A web-based diagnostic platform for a medical device, built in a 3-person agile team.',
-      bullets: [
-        'C++/JavaScript backend with a WebSocket server for low-latency data exchange between device code and a browser GUI.',
-        'Python REST API managing SQLite databases for patient and device records.',
-      ],
-      tags: ['C++', 'Python', 'WebSockets', 'REST'],
-    },
-    {
-      dates: '2026',
+      dates: 'Oct 2026 – Present',
       place: 'Personal',
       title: 'This website',
       lede: 'A static site built with Astro, with no client-side framework.',
@@ -176,6 +165,17 @@ export const projects = {
         href: 'https://github.com/ColeRowellLove/colerowelllove.github.io',
         label: 'View source on GitHub',
       },
+    },
+    {
+      dates: 'May – Dec 2024',
+      place: 'Sonic Incytes',
+      title: 'Liver health assessment platform',
+      lede: 'A web-based diagnostic platform for a medical device, built in a 3-person agile team.',
+      bullets: [
+        'C++/JavaScript backend with a WebSocket server for low-latency data exchange between device code and a browser GUI.',
+        'Python REST API managing SQLite databases for patient and device records.',
+      ],
+      tags: ['C++', 'Python', 'WebSockets', 'REST'],
     },
   ],
 };
