@@ -48,6 +48,7 @@ export const experience = [
     place: 'Vancouver, BC',
     title: 'Machine Learning Researcher',
     org: 'UBC Robotics and Control Laboratory (NSERC-URSA)',
+    orgUrl: 'https://rcl.ece.ubc.ca/home-page/',
     summary: 'Echocardiography report generation from multi-view ultrasound video.',
     bullets: [
       "Reimplemented Stanford's EchoPrime multimodal deep-learning architecture to generate structured echocardiography reports from multi-view ultrasound videos, adapting the pipeline to UBC's proprietary clinical dataset.",
@@ -60,6 +61,7 @@ export const experience = [
     place: 'Vancouver, BC',
     title: 'Machine Learning Engineer, Co-op',
     org: 'Yakoa, Inc.',
+    orgUrl: 'https://www.yakoa.io/',
     summary: 'LLM benchmarking and fast image classifiers for IP infringement detection.',
     bullets: [
       'Designed a scalable, provider-agnostic LLM benchmarking framework integrating OpenAI, Google, Anthropic, Mistral, and AWS APIs to evaluate image-based IP infringement detection.',
@@ -75,6 +77,7 @@ export const experience = [
     place: 'Vancouver, BC',
     title: 'Junior Software Developer, Co-op',
     org: 'Sonic Incytes Medical Corp.',
+    orgUrl: 'https://www.sonicincytes.com/',
     summary: 'Full-stack software for a liver health assessment device.',
     bullets: [
       'Developed full-stack medical device software for liver health assessment in a 3-person agile team, building a web-based diagnostic platform (HTML, CSS, JavaScript, Python, C++).',
@@ -88,6 +91,7 @@ export const experience = [
     place: 'Burnaby, BC',
     title: 'Software Systems Engineering, Co-op',
     org: 'Kardium, Inc.',
+    orgUrl: 'https://kardium.com/',
     summary: 'Time-series analysis and tooling for cardiac ablation systems.',
     bullets: [
       'Analyzed time-series data from cardiac ablation systems using MATLAB, developing visualization pipelines for electrical signal analysis and system performance monitoring.',
