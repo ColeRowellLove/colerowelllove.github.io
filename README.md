@@ -42,7 +42,7 @@ npm run lint
 
 This runs `html-validate` on the HTML, `stylelint` on the CSS, and `eslint` on the JavaScript. The same checks run in GitHub Actions on every pull request and on pushes to `main` (see `.github/workflows/ci.yml`). Dependabot opens monthly update PRs for the dev dependencies and the workflow actions.
 
-Workflow: every change starts from an issue, gets its own typed branch off `main` (`feature/<name>`, `bugfix/<name>`, and so on), and goes through a pull request that covers that issue only. CI must pass before merging. The full rules are in [`CLAUDE.md`](CLAUDE.md).
+Workflow: every change starts from an issue, gets its own typed branch off `main` (`feature/<name>`, `bugfix/<name>`, and so on), and goes through a pull request that covers that issue only. CI must pass before merging, and the branch is deleted once it's merged. The full rules are in [`CLAUDE.md`](CLAUDE.md).
 
 ## Deployment
 
