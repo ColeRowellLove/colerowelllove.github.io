@@ -27,7 +27,7 @@ npm run serve      # preview at http://localhost:8000
 
 1. **Every PR has an issue.** Open or find a GitHub issue before starting work, and link it in the PR (for example `Closes #12`).
 2. **One issue per PR, and nothing else.** A PR does exactly what its issue describes. Unrelated fixes, refactors, or cleanups go in their own issue and PR, even if they're small.
-3. **Never commit directly to `main`.** `main` is deployed to GitHub Pages on every push, so all changes arrive through a pull request.
+3. **Every branch goes through a PR first.** Push the branch, open a pull request, and merge it on GitHub once CI is green. Never merge a branch into `main` locally and push it, and never commit or push directly to `main`. `main` is deployed to GitHub Pages on every push, so a PR is the only way changes reach the live site.
 4. **Branch from `main` using a typed name:**
    - `feature/<name>` for new features or content
    - `bugfix/<name>` for fixes
@@ -52,7 +52,7 @@ npm run serve      # preview at http://localhost:8000
 ## PR checklist
 
 - [ ] Linked issue, and the PR is limited to that issue
-- [ ] Branch name follows the convention above
+- [ ] Branch name follows the convention above, and the change reaches `main` through this PR
 - [ ] `npm run lint` passes and CI is green
 - [ ] Checked at phone and desktop widths
 - [ ] `README.md` and `CLAUDE.md` updated if needed
