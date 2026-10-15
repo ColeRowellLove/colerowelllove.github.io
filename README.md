@@ -22,6 +22,7 @@ My personal site, live at **https://colerowelllove.github.io**. It's a small mul
 │   ├── pages/        # index, experience, projects, about, contact, 404 (.astro)
 │   ├── layouts/      # Layout.astro: head/meta, header/nav, footer
 │   ├── components/   # Entry.astro: the shared card
+│   ├── assets/       # Images processed by Astro (the About-page photo)
 │   ├── data/site.js  # All page content: experience, projects, skills, interests
 │   ├── styles/       # global.css
 │   └── scripts/      # site.js: footer year, rotating topic word, scroll-reveal
