@@ -203,25 +203,25 @@ export const awards = [
     dates: 'Aug 2025',
     title: 'Charles and Jane Banks Scholarship',
     org: 'University of British Columbia',
-    lede: 'Awarded on the recommendation of the Faculties to continuing undergraduates in Science, Applied Science, Forestry, Land and Food Systems, and Pharmaceutical Sciences who have completed at least one year.',
+    lede: 'Recommended by the Faculty of Applied Science for continuing undergraduates.',
   },
   {
     dates: 'May 2025',
     title: 'Undergraduate Summer Research Award (USRA)',
     org: 'University of British Columbia',
-    lede: 'An NSERC award that funds undergraduate research experiences for students with strong research potential; roughly 3,000 are offered each year across Canada.',
+    lede: 'NSERC award that funds an undergraduate research role for students with strong research potential; about 3,000 are offered across Canada each year.',
   },
   {
     dates: 'Sep 2022 and 2023',
     title: 'Engineering Scholarship',
     org: 'University of British Columbia',
-    lede: 'Endowed by alumni and friends for Engineering students and awarded on the recommendation of the Faculty of Applied Science.',
+    lede: 'Faculty-recommended scholarship, funded by alumni and friends, for Engineering students.',
   },
   {
     dates: 'Sep 2022 and 2023',
     title: 'Trek Excellence Scholarship for Continuing Students',
     org: 'University of British Columbia',
-    lede: 'A $1,500 scholarship offered to the top 5% of undergraduate domestic students at UBC Vancouver.',
+    lede: '$1,500 for ranking in the top 5% of domestic undergraduates in their year and faculty.',
   },
 ];
 
