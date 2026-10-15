@@ -263,17 +263,6 @@ h1::after {
   border-radius: 50%;
   background: var(--blue);
 }
-.rotator {
-  margin-top: 16px;
-  color: var(--muted);
-}
-.rotator span {
-  color: var(--on-green);
-  background: var(--green);
-  padding: 1px 8px;
-  border-radius: 3px;
-  font-weight: 500;
-}
 .links {
   list-style: none;
   display: flex;

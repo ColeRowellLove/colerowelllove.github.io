@@ -15,8 +15,6 @@ export const nav = [
   { label: 'Contact', href: '/contact' },
 ];
 
-export const topics = ['medical imaging', 'LLM evaluation', 'computer vision', 'model compression'];
-
 export const highlights = [
   {
     value: '75%',

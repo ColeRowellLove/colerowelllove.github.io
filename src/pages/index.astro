@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Entry from '../components/Entry.astro';
-import { site, topics, highlights, experience } from '../data/site.js';
+import { site, highlights, experience } from '../data/site.js';
 
 const recent = experience.slice(0, 3);
 ---
@@ -30,9 +30,6 @@ const recent = experience.slice(0, 3);
     <p class="status">
       <span class="status-dot" aria-hidden="true"></span>Currently a Data Engineer at
       EarthDynamicsAI
-    </p>
-    <p class="rotator">
-      I work on <span data-words={topics.join('|')}>{topics[0]}</span>
     </p>
     <ul class="links">
       <li>
