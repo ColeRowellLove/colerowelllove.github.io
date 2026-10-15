@@ -5,32 +5,66 @@ import { site, topics, highlights, experience } from '../data/site.js';
 
 const recent = experience.slice(0, 3);
 ---
+
 <Layout
   title={`${site.name} | Machine Learning Engineer`}
   description="Cole Rowell-Love is a machine learning engineer and Engineering Physics graduate of the University of British Columbia, with experience in medical imaging research, LLM evaluation, and production computer vision."
   ogDescription="Machine learning engineer: medical imaging research, LLM evaluation, and production computer vision."
 >
   <section class="intro wrap">
-    <div class="term-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-    <p class="prompt" aria-hidden="true">whoami</p>
+    <div class="term-dots" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <p class="prompt" aria-hidden="true">
+      whoami
+    </p>
     <p class="eyebrow">Machine Learning Engineer</p>
     <h1>{site.name}</h1>
-    <p class="summary">I'm an Engineering Physics graduate of the University of British Columbia. My work spans deep learning for medical imaging, evaluation and fine-tuning of large language models, and production computer vision.</p>
-    <p class="status"><span class="status-dot" aria-hidden="true"></span>Currently a Data Engineer at EarthDynamicsAI</p>
-    <p class="rotator">I work on <span data-words={topics.join('|')}>{topics[0]}</span></p>
+    <p class="summary">
+      I'm an Engineering Physics graduate of the University of British Columbia. My work spans deep
+      learning for medical imaging, evaluation and fine-tuning of large language models, and
+      production computer vision.
+    </p>
+    <p class="status">
+      <span class="status-dot" aria-hidden="true"></span>Currently a Data Engineer at
+      EarthDynamicsAI
+    </p>
+    <p class="rotator">
+      I work on <span data-words={topics.join('|')}>{topics[0]}</span>
+    </p>
     <ul class="links">
-      <li><a href="/experience">Experience</a></li>
-      <li><a href="/projects">Projects</a></li>
-      <li><a href={`mailto:${site.email}`}>Email</a></li>
-      <li><a href={site.linkedin} target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href={site.github} target="_blank" rel="noopener">GitHub</a></li>
+      <li>
+        <a href="/experience">Experience</a>
+      </li>
+      <li>
+        <a href="/projects">Projects</a>
+      </li>
+      <li>
+        <a href={`mailto:${site.email}`}>Email</a>
+      </li>
+      <li>
+        <a href={site.linkedin} target="_blank" rel="noopener">
+          LinkedIn
+        </a>
+      </li>
+      <li>
+        <a href={site.github} target="_blank" rel="noopener">
+          GitHub
+        </a>
+      </li>
     </ul>
   </section>
 
   <section class="wrap block" aria-labelledby="highlights-h">
     <h2 id="highlights-h">Highlights</h2>
     <ul class="stats">
-      {highlights.map((h) => <li><strong>{h.value}</strong> {h.text}</li>)}
+      {highlights.map((h) => (
+        <li>
+          <strong>{h.value}</strong> {h.text}
+        </li>
+      ))}
     </ul>
   </section>
 
@@ -41,6 +75,8 @@ const recent = experience.slice(0, 3);
         <Entry dates={job.dates} title={job.title} org={job.org} lede={job.summary} />
       ))}
     </div>
-    <p class="more"><a href="/experience">See all experience</a> · <a href="/projects">Browse projects</a></p>
+    <p class="more">
+      <a href="/experience">See all experience</a> · <a href="/projects">Browse projects</a>
+    </p>
   </section>
 </Layout>

@@ -18,10 +18,19 @@ export const nav = [
 export const topics = ['medical imaging', 'LLM evaluation', 'computer vision', 'model compression'];
 
 export const highlights = [
-  { value: '75%', text: 'lower classifier latency through TorchScript, distillation, and INT8 quantization' },
+  {
+    value: '75%',
+    text: 'lower classifier latency through TorchScript, distillation, and INT8 quantization',
+  },
   { value: '80,000+', text: 'images collected to train ViT and hybrid ViT-CNN classifiers' },
-  { value: '95%', text: 'shorter self-test data-extraction runtime after refactoring MATLAB data handling' },
-  { value: '5–10%', text: 'accuracy gains for LLM image analysis from prompt optimization and fine-tuning' },
+  {
+    value: '95%',
+    text: 'shorter self-test data-extraction runtime after refactoring MATLAB data handling',
+  },
+  {
+    value: '5–10%',
+    text: 'accuracy gains for LLM image analysis from prompt optimization and fine-tuning',
+  },
 ];
 
 export const experience = [
@@ -159,14 +168,21 @@ export const projects = {
         'Linted in CI and deployed to GitHub Pages with GitHub Actions.',
       ],
       tags: ['Astro', 'CSS', 'GitHub Actions'],
-      link: { href: 'https://github.com/ColeRowellLove/colerowelllove.github.io', label: 'View source on GitHub' },
+      link: {
+        href: 'https://github.com/ColeRowellLove/colerowelllove.github.io',
+        label: 'View source on GitHub',
+      },
     },
   ],
 };
 
 export const skills = [
   { label: 'Programming languages', value: 'Python, C++, MATLAB, Java, SQL' },
-  { label: 'ML and data science', value: 'PyTorch, TensorFlow/Keras, Hugging Face, OpenCV, scikit-learn, NumPy, Pandas, Matplotlib' },
+  {
+    label: 'ML and data science',
+    value:
+      'PyTorch, TensorFlow/Keras, Hugging Face, OpenCV, scikit-learn, NumPy, Pandas, Matplotlib',
+  },
   { label: 'Tools', value: 'Docker, AWS, GCP, Git, Linux, Jira, Confluence' },
 ];
 
@@ -206,8 +222,20 @@ export const awards = [
 ];
 
 export const interests = [
-  { label: 'Staying active', pick: { kind: 'Hike', text: 'Garibaldi Lake, BC' }, also: 'Gym, cycling' },
-  { label: 'Watching sports', pick: { kind: 'Team', text: 'Seattle Seahawks' }, also: 'NFL, fantasy football, UFC' },
+  {
+    label: 'Staying active',
+    pick: { kind: 'Hike', text: 'Garibaldi Lake, BC' },
+    also: 'Gym, cycling',
+  },
+  {
+    label: 'Watching sports',
+    pick: { kind: 'Team', text: 'Seattle Seahawks' },
+    also: 'NFL, fantasy football, UFC',
+  },
   { label: 'Music', pick: { kind: 'Artist', text: 'Elliott Smith' }, also: 'EDM, rock, rap' },
-  { label: 'Reading and learning', pick: { kind: 'Book', text: 'The Power of Now, by Eckhart Tolle' }, also: 'Self-help books, AI' },
+  {
+    label: 'Reading and learning',
+    pick: { kind: 'Book', text: 'The Power of Now, by Eckhart Tolle' },
+    also: 'Self-help books, AI',
+  },
 ];

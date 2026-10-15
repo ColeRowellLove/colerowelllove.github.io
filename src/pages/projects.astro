@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Entry from '../components/Entry.astro';
 import { site, projects } from '../data/site.js';
 ---
+
 <Layout
   title={`Projects | ${site.name}`}
   description="Selected projects by Cole Rowell-Love: echocardiography report generation, an LLM benchmarking framework, production image classifiers, medical device software, and an autonomous vehicle in ROS."
@@ -11,20 +12,27 @@ import { site, projects } from '../data/site.js';
   <section class="wrap page-head">
     <p class="eyebrow">Projects</p>
     <h1>Selected projects</h1>
-    <p class="summary">Most of this work was done for employers, a research lab, or coursework, so the source code is private. The one public repository is this website; I'm happy to talk through any of the rest.</p>
+    <p class="summary">
+      Most of this work was done for employers, a research lab, or coursework, so the source code is
+      private. The one public repository is this website; I'm happy to talk through any of the rest.
+    </p>
   </section>
 
   <section class="wrap block" aria-labelledby="ml-h">
     <h2 id="ml-h">Machine learning</h2>
     <div class="entries">
-      {projects.ml.map((p) => <Entry {...p} />)}
+      {projects.ml.map((p) => (
+        <Entry {...p} />
+      ))}
     </div>
   </section>
 
   <section class="wrap block" aria-labelledby="sw-h">
     <h2 id="sw-h">Software</h2>
     <div class="entries">
-      {projects.software.map((p) => <Entry {...p} />)}
+      {projects.software.map((p) => (
+        <Entry {...p} />
+      ))}
     </div>
   </section>
 </Layout>

@@ -1,13 +1,32 @@
 ---
-const { dates, place, title, org, lede, bullets = [], tags = [], note, link, heading = 'h3' } = Astro.props;
+const {
+  dates,
+  place,
+  title,
+  org,
+  lede,
+  bullets = [],
+  tags = [],
+  note,
+  link,
+  heading = 'h3',
+} = Astro.props;
 
 const dateLines = Array.isArray(dates) ? dates : [dates];
 const Heading = heading;
 const headingClass = heading === 'h2' ? 'entry-title' : undefined;
 ---
+
 <article class="entry">
   <div class="entry-meta">
-    <p class="dates">{dateLines.map((line, i) => (<>{i > 0 && <br />}{line}</>))}</p>
+    <p class="dates">
+      {dateLines.map((line, i) => (
+        <>
+          {i > 0 && <br />}
+          {line}
+        </>
+      ))}
+    </p>
     {place && <p class="place">{place}</p>}
   </div>
   <div class="entry-body">
@@ -15,8 +34,26 @@ const headingClass = heading === 'h2' ? 'entry-title' : undefined;
     {org && <p class="org">{org}</p>}
     {note && <p class="note">{note}</p>}
     {lede && <p class="lede">{lede}</p>}
-    {bullets.length > 0 && <ul>{bullets.map((b) => <li>{b}</li>)}</ul>}
-    {tags.length > 0 && <ul class="tags" aria-label="Topics">{tags.map((t) => <li>{t}</li>)}</ul>}
-    {link && <p class="more"><a href={link.href} target="_blank" rel="noopener">{link.label}</a></p>}
+    {bullets.length > 0 && (
+      <ul>
+        {bullets.map((b) => (
+          <li>{b}</li>
+        ))}
+      </ul>
+    )}
+    {tags.length > 0 && (
+      <ul class="tags" aria-label="Topics">
+        {tags.map((t) => (
+          <li>{t}</li>
+        ))}
+      </ul>
+    )}
+    {link && (
+      <p class="more">
+        <a href={link.href} target="_blank" rel="noopener">
+          {link.label}
+        </a>
+      </p>
+    )}
   </div>
 </article>

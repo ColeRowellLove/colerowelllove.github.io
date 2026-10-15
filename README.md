@@ -28,6 +28,7 @@ My personal site, live at **https://colerowelllove.github.io**. It's a small mul
 │   └── scripts/      # site.js: footer year, rotating topic word, scroll-reveal
 ├── public/           # favicon.svg and PNG icons, robots.txt, sitemap.xml (copied as-is)
 ├── .nvmrc            # Node version for local development
+├── .prettierrc       # Prettier config (see also .prettierignore)
 ├── astro.config.mjs
 ├── .github/workflows # ci.yml (lint and checks), deploy.yml (GitHub Pages)
 ├── LICENSE           # MIT license for the code
@@ -53,7 +54,7 @@ npm install
 npm run lint
 ```
 
-`npm run lint` builds the site, then runs `html-validate` on the built pages, `stylelint` on the CSS, and `eslint` on the JavaScript. The same checks run in GitHub Actions on every pull request and on pushes to `main` (see `.github/workflows/ci.yml`). Dependabot opens monthly update PRs for the dev dependencies and the workflow actions.
+`npm run lint` checks formatting with [Prettier](https://prettier.io) (`npm run format` fixes it), builds the site, then runs `html-validate` on the built pages, `stylelint` on the CSS, and `eslint` on the JavaScript. The same checks run in GitHub Actions on every pull request and on pushes to `main` (see `.github/workflows/ci.yml`). Dependabot opens monthly update PRs for the dev dependencies and the workflow actions.
 
 `npm install` also sets up a [husky](https://typicode.github.io/husky/) pre-commit hook (`.husky/pre-commit`) that runs `npm run lint` before every commit, so lint errors are caught locally. Don't bypass it with `--no-verify`.
 
