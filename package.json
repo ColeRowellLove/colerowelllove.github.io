@@ -12,9 +12,11 @@
     "lint": "npm run format:check && npm run lint:html && npm run lint:css && npm run lint:js",
     "lint:html": "astro build && html-validate \"dist/**/*.html\"",
     "lint:css": "stylelint \"src/**/*.css\"",
-    "lint:js": "eslint src/scripts astro.config.mjs eslint.config.js",
+    "lint:js": "eslint src/scripts scripts astro.config.mjs eslint.config.js",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "a11y": "npm run build && node scripts/a11y.mjs",
+    "lighthouse": "npm run build && npx --yes @lhci/cli@0.15.1 autorun"
   },
   "engines": {
     "node": ">=22.12"
@@ -22,12 +24,14 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "astro": "^7.3.8",
+    "axe-core": "^4.14.0",
     "eslint": "^10.12.0",
     "globals": "^17.13.0",
     "html-validate": "^11.16.2",
     "husky": "^9.1.7",
     "prettier": "^3.9.10",
     "prettier-plugin-astro": "^1.1.1",
+    "puppeteer-core": "^25.14.0",
     "stylelint": "^17.16.0",
     "stylelint-config-recommended": "^18.0.0"
   },
