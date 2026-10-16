@@ -154,6 +154,26 @@ export const projects = {
     {
       dates: 'Oct 2026 – Present',
       place: 'Personal',
+      title: 'Sleeper fantasy football assistant',
+      lede: "A web app that connects to a Sleeper fantasy football league by username and shows standings, rosters, matchup lineups, and player stats scored under the league's own rules.",
+      bullets: [
+        "Standings, rosters, lineups, and a searchable players tab, with projected and actual points calculated from each league's scoring settings.",
+        'Python and FastAPI backend, Next.js and TypeScript frontend, and Postgres storage.',
+        'CI runs strict type checking, tests, linting, and accessibility checks.',
+        'Early development: consensus rankings, waiver and trade suggestions, and a playoff-odds simulator are planned next.',
+      ],
+      tags: ['Python', 'FastAPI', 'Next.js', 'TypeScript', 'Postgres'],
+      links: [
+        {
+          href: 'https://github.com/ColeRowellLove/sleeper-fantasy-assistant',
+          label: 'View source on GitHub',
+        },
+        { href: 'https://sleeper-fantasy-assistant-lovat.vercel.app', label: 'Live demo' },
+      ],
+    },
+    {
+      dates: 'Oct 2026 – Present',
+      place: 'Personal',
       title: 'This website',
       lede: 'A static site built with Astro, with no client-side framework.',
       bullets: [
