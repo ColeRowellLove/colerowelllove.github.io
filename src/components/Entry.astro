@@ -10,9 +10,11 @@ const {
   tags = [],
   note,
   link,
+  links = [],
   heading = 'h3',
 } = Astro.props;
 
+const allLinks = links.length > 0 ? links : link ? [link] : [];
 const dateLines = Array.isArray(dates) ? dates : [dates];
 const Heading = heading;
 const headingClass = heading === 'h2' ? 'entry-title' : undefined;
@@ -59,11 +61,16 @@ const headingClass = heading === 'h2' ? 'entry-title' : undefined;
         ))}
       </ul>
     )}
-    {link && (
+    {allLinks.length > 0 && (
       <p class="more">
-        <a href={link.href} target="_blank" rel="noopener">
-          {link.label}
-        </a>
+        {allLinks.map((l, i) => (
+          <>
+            {i > 0 && ' · '}
+            <a href={l.href} target="_blank" rel="noopener">
+              {l.label}
+            </a>
+          </>
+        ))}
       </p>
     )}
   </div>
